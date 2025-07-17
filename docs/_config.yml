@@ -1,0 +1,36 @@
+title: Tiation AI Agents
+description: Enterprise-grade AI automation platform for autonomous business processes
+url: https://tiation.github.io/tiation-ai-agents
+baseurl: /tiation-ai-agents
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Site settings
+author:
+  name: Tiation Team
+  email: tiatheone@protonmail.com
+
+# GitHub Pages settings
+repository: tiation/tiation-ai-agents
+
+# Navigation
+header_pages:
+  - index.md
+  - api.md
+  - enterprise-deployment.md
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
