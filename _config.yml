@@ -1,0 +1,54 @@
+title: Tiation AI Agents
+description: Enterprise AI Automation Platform for Business Process Automation
+url: "https://tiation.github.io"
+baseurl: "/tiation-ai-agents"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+
+# GitHub Pages settings
+repository: tiation/tiation-ai-agents
+github_username: tiation
+
+# SEO settings
+author: Tiation
+twitter_username: tiation
+linkedin_username: tiation
+
+# Site settings
+lang: en
+timezone: America/New_York
+
+# Navigation
+nav_links:
+  - name: Home
+    url: /
+  - name: Features
+    url: /#features
+  - name: About
+    url: /#about
+  - name: GitHub
+    url: https://github.com/tiation/tiation-ai-agents
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - src/
+  - tests/
+  - requirements.txt
+  - .gitignore
+  - README.md
