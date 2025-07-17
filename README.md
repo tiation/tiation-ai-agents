@@ -10,7 +10,7 @@ Tiation AI Agents is an enterprise-grade AI automation platform designed to revo
 For detailed documentation, refer to the [docs](docs) folder.
 
 ## Pages Site
-Visit our [Pages Site](https://tiation-ai-agents.pages.dev) for more insights into our platform.
+Visit our [GitHub Pages Site](https://tiation.github.io/tiation-ai-agents/) for more insights into our platform.
 
 ## Features
 - Autonomous AI agents for various business processes
