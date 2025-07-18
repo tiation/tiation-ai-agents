@@ -1,7 +1,7 @@
 # GitHub Pages Configuration for tiation-ai-agents
 
-title: "tiation-ai-agents"
-description: "Enterprise-grade solutions with comprehensive documentation"
+title: "🤖 Tiation AI Agents"
+description: "Intelligent automation that empowers, not replaces - Enterprise AI solutions by Tia Astor"
 url: "https://tiation.github.io/tiation-ai-agents"
 baseurl: "/tiation-ai-agents"
 
@@ -13,10 +13,16 @@ plugins:
   - jekyll-seo-tag
 
 # SEO
-author: "Tiation"
+author: 
+  name: "Tia Astor"
+  email: "tiatheone@protonmail.com"
+  url: "https://tiation.github.io/TiaAstor/"
 twitter:
   username: tiation
   card: summary_large_image
+
+# Repository
+repository: "https://github.com/tiation/tiation-ai-agents"
 
 # Build settings
 markdown: kramdown
