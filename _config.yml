@@ -1,11 +1,37 @@
-title: tiation-ai-agents
-description: Enterprise-grade solution with dark neon theme
-url: "https://tiaastor.github.io"
+title: Tiation AI Agents
+description: Enterprise-grade AI automation platform with dark neon theme and professional documentation
+url: "https://tiation.github.io"
 baseurl: "/tiation-ai-agents"
 theme: minima
 plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
-author: Tiation
-github_username: tiaastor
+
+# Site settings
+author:
+  name: Tiation Team
+  email: tiatheone@protonmail.com
+
+# GitHub settings
+github_username: tiation
+repository: https://github.com/tiation/tiation-ai-agents
+
+# Navigation
+header_pages:
+  - index.md
+  - docs/faq.md
+  - docs/troubleshooting.md
+  - docs/README.md
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - TiationAIAgentsMobile/
+  - mobile-app/
