@@ -65,12 +65,30 @@ class LiberationSystemIntegration:
         self.logger = setup_logger(__name__)
         self.session: Optional[aiohttp.ClientSession] = None
         self.websocket: Optional[websockets.WebSocketServerProtocol] = None
-        self.connected = False
-        
-        # Task queues
-        self.resource_tasks: List[ResourceDistributionTask] = []
-        self.truth_validation_requests: List[TruthValidationRequest] = []
-        
+self.connected = False
+    
+    # Event loop
+    loop = asyncio.get_event_loop()
+
+    # Task queues
+    self.resource_tasks: List[ResourceDistributionTask] = []
+    self.truth_validation_requests: List[TruthValidationRequest] = []
+
+    # Metrics collection
+    self.metrics: Dict[str, Any] = {}
+
+    # Integration callbacks
+    self.callbacks = {
+        "on_connect": None,
+        "on_disconnect": None,
+        "on_task_received": None,
+        "on_validation_received": None
+    }
+
+    # Register event listeners
+    self.loop.create_task(self._event_listener())
+
+    
     async def initialize(self):
         """Initialize the Liberation System integration."""
         self.logger.info("Initializing Liberation System integration...")

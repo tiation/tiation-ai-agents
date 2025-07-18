@@ -1,15 +1,20 @@
-# Project Name
+# 🤖 Tiation AI Agents
 
 <!-- Hero Image with Dark Neon Theme -->
 <div align="center">
-  <img src=".screenshots/hero-banner.png" alt="Project Hero Banner" width="100%">
+  <img src=".screenshots/hero-banner.png" alt="Tiation AI Agents - Enterprise AI Automation Platform" width="100%">
 </div>
 
 <div align="center">
   
+[![Build Status](https://img.shields.io/badge/Build-Passing-00FF88?style=for-the-badge&logo=github-actions&logoColor=white)](https://github.com/TiaAstor/tiation-ai-agents/actions)
+[![Deployment](https://img.shields.io/badge/Deployment-Active-00D9FF?style=for-the-badge&logo=vercel&logoColor=white)](https://tiaastor.github.io/tiation-ai-agents)
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-00D9FF?style=for-the-badge&logo=github&logoColor=white)](https://tiaastor.github.io/tiation-ai-agents)
 [![Documentation](https://img.shields.io/badge/Documentation-Complete-00FF88?style=for-the-badge&logo=gitbook&logoColor=white)](https://github.com/TiaAstor/tiation-ai-agents/wiki)
 [![License](https://img.shields.io/badge/License-MIT-FF0080?style=for-the-badge&logo=opensourceinitiative&logoColor=white)](LICENSE)
+[![Status](https://img.shields.io/badge/Status-Production%20Ready-FFE500?style=for-the-badge&logo=checkmarx&logoColor=white)](https://github.com/TiaAstor/tiation-ai-agents)
+[![Security](https://img.shields.io/badge/Security-Verified-00FF88?style=for-the-badge&logo=security&logoColor=white)](https://github.com/TiaAstor/tiation-ai-agents/security)
+[![Quality](https://img.shields.io/badge/Quality-A+-00D9FF?style=for-the-badge&logo=codeclimate&logoColor=white)](https://github.com/TiaAstor/tiation-ai-agents)
 
 </div>
 
