@@ -1,204 +1,200 @@
-# 🤖 Tiation AI Agents
+# tiation-ai-agents
 
 <div align="center">
 
-![Tiation AI Agents Banner](https://img.shields.io/badge/🔮_TIATION_ECOSYSTEM-AI_Powered_Automation-00FFFF?style=for-the-badge&labelColor=0A0A0A&color=FF00FF)
+![tiation-ai-agents Banner](https://img.shields.io/badge/🔮_TIATION_ECOSYSTEM-tiation-ai-agents-00FFFF?style=for-the-badge&labelColor=0A0A0A&color=00FFFF)
 
-**"Intelligent automation agents for enterprise workflows"**
+**Intelligent AI agents for automation, customer service, and task management with natural language processing**
 
-*AI-Powered • Scalable • Cross-Platform*
+*Professional • Scalable • Mission-Driven*
 
-[![Mobile App](https://img.shields.io/badge/📱_Mobile_App-React_Native-00FFFF?style=flat-square&labelColor=0A0A0A)](TiationAIAgentsMobile/)
-[![Web Demo](https://img.shields.io/badge/🌐_Web_Demo-Live_Dashboard-FF00FF?style=flat-square&labelColor=0A0A0A)](https://tiaastor.github.io/tiation-ai-agents)
-[![Documentation](https://img.shields.io/badge/📚_Documentation-Complete-007FFF?style=flat-square&labelColor=0A0A0A)](https://github.com/TiaAstor/tiation-ai-agents/wiki)
-[![API](https://img.shields.io/badge/🔧_API-RESTful-00FFFF?style=flat-square&labelColor=0A0A0A)](docs/api-reference.md)
+[![🌐_Live_Demo](https://img.shields.io/badge/🌐_Live_Demo-View_Project-00FFFF?style=flat-square&labelColor=0A0A0A)](https://tiation.github.io/tiation-ai-agents)
+[![📚_Documentation](https://img.shields.io/badge/📚_Documentation-Complete-007FFF?style=flat-square&labelColor=0A0A0A)](https://tiation.github.io/tiation-ai-agents)
+[![🏗️_Architecture](https://img.shields.io/badge/🏗️_Architecture-Diagram-FF00FF?style=flat-square&labelColor=0A0A0A)](https://tiation.github.io/tiation-ai-agents/architecture)
+[![⚡_Status](https://img.shields.io/badge/⚡_Status-Active Development-FF00FF?style=flat-square&labelColor=0A0A0A)](https://github.com/tiation/tiation-ai-agents)
+[![📄_License](https://img.shields.io/badge/📄_License-MIT-00FFFF?style=flat-square&labelColor=0A0A0A)](https://github.com/tiation/tiation-ai-agents/blob/main/LICENSE)
 
 </div>
 
-## 🚀 About
+## 🚀 Overview
 
-**Enterprise-grade AI automation platform featuring intelligent agents, cross-platform mobile applications, and comprehensive workflow management for modern businesses.**
+Intelligent AI agents for automation, customer service, and task management with natural language processing
 
-Tiation AI Agents combines advanced machine learning with intuitive interfaces to deliver powerful automation solutions. Our platform includes a full-featured React Native mobile app, web dashboard, and API ecosystem designed for scalability and enterprise deployment.
+### ✨ Key Features
 
-<div align="center">
-  <img src=".screenshots/demo-overview.svg" alt="Project Overview" width="80%">
-</div>
-
----
-
-## ✨ Features
-
-<!-- Feature showcase with screenshots -->
-<table>
-  <tr>
-    <td width="50%">
-      <h3>🎯 Key Feature 1</h3>
-      <img src=".screenshots/feature-1.svg" alt="Feature 1 Screenshot" width="100%">
-      <p>Description of feature 1 with benefits</p>
-    </td>
-    <td width="50%">
-      <h3>⚡ Key Feature 2</h3>
-      <img src=".screenshots/feature-2.svg" alt="Feature 2 Screenshot" width="100%">
-      <p>Description of feature 2 with benefits</p>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%">
-      <h3>🔥 Key Feature 3</h3>
-      <img src=".screenshots/feature-3.svg" alt="Feature 3 Screenshot" width="100%">
-      <p>Description of feature 3 with benefits</p>
-    </td>
-    <td width="50%">
-      <h3>🌟 Key Feature 4</h3>
-      <img src=".screenshots/feature-4.svg" alt="Feature 4 Screenshot" width="100%">
-      <p>Description of feature 4 with benefits</p>
-    </td>
-  </tr>
-</table>
-
----
-
-## 🎨 Live Demo
-
-<div align="center">
-  <a href="https://tiaastor.github.io/tiation-ai-agents" target="_blank">
-    <img src=".screenshots/demo-preview.svg" alt="Live Demo Preview" width="80%">
-  </a>
-  <br>
-  <a href="https://tiaastor.github.io/tiation-ai-agents" target="_blank">
-    <img src="https://img.shields.io/badge/🔗%20View%20Live%20Demo-00D9FF?style=for-the-badge&logo=github&logoColor=white" alt="View Live Demo">
-  </a>
-</div>
+- 🎯 **Natural Language Processing** - Advanced NLP for human-like interactions
+- 🔧 **Task Automation** - Intelligent task scheduling and execution
+- 🌟 **Multi-Platform Support** - Deploy across web, mobile, and desktop
+- 🛡️ **Learning Capabilities** - Adaptive learning from user interactions
 
 ---
 
 ## 🏗️ Architecture
 
-<div align="center">
-  <img src=".screenshots/architecture-diagram.svg" alt="Architecture Diagram" width="90%">
-</div>
+![Architecture Diagram](assets/architecture/tiation-ai-agents-architecture.svg)
 
 ### System Components
 
-- **Component 1**: Description and purpose
-- **Component 2**: Description and purpose
-- **Component 3**: Description and purpose
+```mermaid
+graph TB
+    A[Agent Core] --> B[NLP Engine]
+    B --> C[Task Manager]
+    C --> D[Integration Layer]
+    
+    style A fill:#00ffff,stroke:#ff00ff,stroke-width:2px
+    style B fill:#ff00ff,stroke:#00ffff,stroke-width:2px
+    style C fill:#00ffff,stroke:#ff00ff,stroke-width:2px
+    style D fill:#ff00ff,stroke:#00ffff,stroke-width:2px
+```
+
+### Technology Stack
+
+- **Frontend**: React, Next.js
+- **Backend**: Python, FastAPI, OpenAI
+- **Database**: MongoDB, Vector DB
+- **Infrastructure**: Docker, Kubernetes
 
 ---
 
-## 🚀 Quick Start
+## 📋 Table of Contents
 
-### Prerequisites
+- [Features](#-features)
+- [Quick Start](#-quick-start)
+- [Installation](#-installation)
+- [Usage](#-usage)
+- [Documentation](#-documentation)
+- [Screenshots](#-screenshots)
+- [FAQ](#-faq)
+- [Contributing](#-contributing)
+- [Support](#-support)
+- [License](#-license)
+- [About Tiation](#-about-tiation)
 
-```bash
-# List prerequisites here
-node --version  # >= 18.0.0
-npm --version   # >= 8.0.0
-```
+---
 
-### Installation
+## ✨ Features
+
+{{FEATURES_LIST}}
+
+---
+
+## 🏃‍♂️ Quick Start
 
 ```bash
 # Clone the repository
-git clone https://github.com/TiaAstor/tiation-ai-agents.git
+git clone https://github.com/tiation/tiation-ai-agents.git
 cd tiation-ai-agents
 
 # Install dependencies
-npm install
+{{INSTALL_COMMANDS}}
 
-# Start development server
-npm run dev
+# Run the application
+{{RUN_COMMANDS}}
 ```
 
-### Development Workflow
+---
 
-<div align="center">
-  <img src=".screenshots/development-workflow.svg" alt="Development Workflow" width="70%">
-</div>
+## 📦 Installation
+
+### Prerequisites
+
+{{PREREQUISITES}}
+
+### Installation Steps
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/tiation/tiation-ai-agents.git
+   cd tiation-ai-agents
+   ```
+
+2. **Install dependencies**
+   ```bash
+   {{DETAILED_INSTALL_COMMANDS}}
+   ```
+
+3. **Configuration**
+   ```bash
+   {{CONFIG_COMMANDS}}
+   ```
 
 ---
 
-## 📱 Screenshots
+## 🎯 Usage
 
-### Desktop Interface
+### Basic Usage
 
-<div align="center">
-  <img src=".screenshots/desktop-interface.svg" alt="Desktop Interface" width="100%">
-</div>
+{{BASIC_USAGE}}
 
-### Mobile Interface
+### Advanced Usage
 
-<div align="center">
-  <img src=".screenshots/mobile-interface.svg" alt="Mobile Interface" width="60%">
-</div>
+{{ADVANCED_USAGE}}
 
-### Dark Theme
+### Examples
 
-<div align="center">
-  <img src=".screenshots/dark-theme.svg" alt="Dark Theme Interface" width="100%">
-</div>
-
----
-
-## 🛠️ Technology Stack
-
-<div align="center">
-  <img src=".screenshots/tech-stack.svg" alt="Technology Stack" width="80%">
-</div>
-
-- **Frontend**: React, TypeScript, Tailwind CSS
-- **Backend**: Node.js, Express
-- **Database**: PostgreSQL
-- **Deployment**: Docker, GitHub Actions
-
----
-
-## 📊 Performance Metrics
-
-<div align="center">
-  <img src=".screenshots/performance-metrics.svg" alt="Performance Metrics" width="90%">
-</div>
-
----
-
-## 🔧 Configuration
-
-### Environment Variables
-
-```env
-# Copy to .env.local
-NODE_ENV=development
-DATABASE_URL=postgresql://username:password@localhost:5432/database
-API_KEY=your-api-key-here
-```
-
-### Configuration Screenshots
-
-<div align="center">
-  <img src=".screenshots/configuration-setup.svg" alt="Configuration Setup" width="70%">
-</div>
+{{USAGE_EXAMPLES}}
 
 ---
 
 ## 📚 Documentation
 
+- **[User Guide](docs/user-guide.md)** - Complete user documentation
+- **[API Reference](docs/api-reference.md)** - Technical API documentation
+- **[Architecture](docs/architecture.md)** - System architecture overview
+- **[Deployment Guide](docs/deployment.md)** - Production deployment instructions
+- **[Developer Guide](docs/developer-guide.md)** - Development setup and guidelines
+
+### Live Documentation
+
+Visit our [GitHub Pages site](https://tiation.github.io/tiation-ai-agents) for interactive documentation.
+
+---
+
+## 📸 Screenshots
+
 <div align="center">
-  <a href="https://github.com/TiaAstor/tiation-ai-agents/wiki" target="_blank">
-    <img src=".screenshots/documentation-preview.svg" alt="Documentation Preview" width="80%">
-  </a>
-  <br>
-  <a href="https://github.com/TiaAstor/tiation-ai-agents/wiki" target="_blank">
-    <img src="https://img.shields.io/badge/📖%20Full%20Documentation-00FF88?style=for-the-badge&logo=gitbook&logoColor=white" alt="Full Documentation">
-  </a>
+  <img src="assets/screenshots/main-interface.png" alt="Main Interface" width="800">
+  <p><em>Main application interface</em></p>
 </div>
 
-### Quick Links
+<div align="center">
+  <img src="assets/screenshots/dashboard.png" alt="Dashboard" width="800">
+  <p><em>Analytics dashboard</em></p>
+</div>
 
-- [📘 User Guide](docs/user-guide.md)
-- [🔧 API Reference](docs/api-reference.md)
-- [🏗️ Architecture Guide](docs/architecture.md)
-- [🚀 Deployment Guide](docs/deployment.md)
+---
+
+## ❓ FAQ
+
+### General Questions
+
+**Q: What makes this solution enterprise-grade?**
+A: Our solution includes comprehensive security, scalability, monitoring, and enterprise integration features with professional support.
+
+**Q: Is this compatible with existing systems?**
+A: Yes, we provide extensive API and integration capabilities for seamless system integration.
+
+**Q: What support options are available?**
+A: We offer community support through GitHub Issues and professional enterprise support for commercial users.
+
+### Technical Questions
+
+**Q: What are the system requirements?**
+A: {{SYSTEM_REQUIREMENTS}}
+
+**Q: How do I handle large scale deployments?**
+A: See our [Deployment Guide](docs/deployment.md) for enterprise-scale deployment strategies.
+
+**Q: Are there any security considerations?**
+A: Yes, please review our [Security Guide](docs/security.md) for comprehensive security best practices.
+
+### Troubleshooting
+
+**Q: Common installation issues**
+A: Check our [Troubleshooting Guide](docs/troubleshooting.md) for solutions to common problems.
+
+**Q: Performance optimization**
+A: Refer to our [Performance Guide](docs/performance.md) for optimization strategies.
 
 ---
 
@@ -206,152 +202,37 @@ API_KEY=your-api-key-here
 
 We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
 
-<div align="center">
-  <img src=".screenshots/contribution-workflow.svg" alt="Contribution Workflow" width="70%">
-</div>
-
 ### Development Setup
 
-```bash
-# Fork the repository
-git clone https://github.com/your-username/tiation-ai-agents.git
-cd tiation-ai-agents
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests
+5. Submit a pull request
 
-# Create feature branch
-git checkout -b feature/amazing-feature
+### Code of Conduct
 
-# Make changes and commit
-git commit -m "Add amazing feature"
-
-# Push to branch
-git push origin feature/amazing-feature
-```
+Please read our [Code of Conduct](CODE_OF_CONDUCT.md) before contributing.
 
 ---
 
-## 🧪 Testing
+## 🆘 Support
 
-<div align="center">
-  <img src=".screenshots/testing-dashboard.svg" alt="Testing Dashboard" width="80%">
-</div>
+### Community Support
 
-```bash
-# Run all tests
-npm test
+- **GitHub Issues**: [Report bugs or request features](https://github.com/tiation/tiation-ai-agents/issues)
+- **Discussions**: [Join community discussions](https://github.com/tiation/tiation-ai-agents/discussions)
+- **Documentation**: [Browse our documentation](https://tiation.github.io/tiation-ai-agents)
 
-# Run tests with coverage
-npm run test:coverage
+### Enterprise Support
 
-# Run end-to-end tests
-npm run test:e2e
-```
+For enterprise customers, we offer:
+- Priority support
+- Custom development
+- Training and consultation
+- SLA guarantees
 
----
-
-## 🚀 Deployment
-
-<div align="center">
-  <img src=".screenshots/deployment-pipeline.svg" alt="Deployment Pipeline" width="90%">
-</div>
-
-### Production Deployment
-
-```bash
-# Build for production
-npm run build
-
-# Deploy to GitHub Pages
-npm run deploy
-```
-
----
-
-## 📈 Roadmap
-
-<div align="center">
-  <img src=".screenshots/roadmap.svg" alt="Project Roadmap" width="90%">
-</div>
-
-- [x] Core functionality
-- [x] Dark theme implementation
-- [ ] Mobile app version
-- [ ] Advanced analytics
-- [ ] Third-party integrations
-
----
-
-## 📞 Support
-
-<div align="center">
-  <img src=".screenshots/support-channels.svg" alt="Support Channels" width="70%">
-</div>
-
-- 📧 **Email**: [support@example.com](mailto:support@example.com)
-- 💬 **Discord**: [Join our community](https://discord.gg/example)
-- 🐛 **Issues**: [GitHub Issues](https://github.com/TiaAstor/tiation-ai-agents/issues)
-- 📖 **Wiki**: [Documentation](https://github.com/TiaAstor/tiation-ai-agents/wiki)
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-## 🌟 Acknowledgments
-
-<div align="center">
-  <img src=".screenshots/acknowledgments.svg" alt="Acknowledgments" width="60%">
-</div>
-
-- Thanks to all contributors
-- Special thanks to the open-source community
-- Inspired by modern development practices
-
----
-
-<div align="center">
-  <img src=".screenshots/footer-banner.svg" alt="Footer Banner" width="100%">
-  
-  **⭐ Star this repository if you find it helpful! ⭐**
-  
-  <a href="https://github.com/TiaAstor/tiation-ai-agents">
-    <img src="https://img.shields.io/github/stars/TiaAstor/tiation-ai-agents?style=social&label=Star&maxAge=2592000" alt="GitHub Stars">
-  </a>
-</div>
-
----
-
-## 📞 Support & Contact
-
-- 📧 **Enterprise Support**: [tiatheone@protonmail.com](mailto:tiatheone@protonmail.com)
-- 🐛 **Issues**: [GitHub Issues](https://github.com/tiaastor/tiation-ai-agents/issues)
-- 📖 **Documentation**: [Wiki](https://github.com/tiaastor/tiation-ai-agents/wiki)
-- 🔗 **GitHub**: [Repository](https://github.com/tiaastor/tiation-ai-agents)
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-## 🔗 Related Projects
-
-- [Tiation Terminal Workflows](https://github.com/tiaastor/tiation-terminal-workflows)
-- [Tiation Docker Debian](https://github.com/tiaastor/tiation-docker-debian)
-- [Tiation AI Platform](https://github.com/tiaastor/tiation-ai-platform)
-- [Tiation CMS](https://github.com/tiaastor/tiation-cms)
-
----
-
-<div align="center">
-  **⭐ Star this repository if you find it helpful! ⭐**
-  
-  <p><strong>Built with ❤️ and enterprise-grade standards by <a href="https://github.com/tiaastor">Tiation</a></strong></p>
-</div>
+Contact us at [tiatheone@protonmail.com](mailto:tiatheone@protonmail.com)
 
 ---
 
@@ -359,12 +240,49 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 This repository is part of the Tiation ecosystem. Explore related projects:
 
-- [🌟 TiaAstor](https://github.com/TiaAstor/TiaAstor) - Personal brand and story
+- [🌟 Tiation Platform](https://github.com/tiation/tiation-ai-platform) - Enterprise AI platform
+- [🤖 AI Agents](https://github.com/tiation/tiation-ai-agents) - Intelligent automation
+- [⚡ Terminal Workflows](https://github.com/tiation/tiation-terminal-workflows) - Developer tools
+- [🐳 Docker Solutions](https://github.com/tiation/tiation-docker-debian) - Container orchestration
+- [📝 CMS](https://github.com/tiation/tiation-cms) - Content management system
 - [🐰 ChaseWhiteRabbit NGO](https://github.com/tiation/tiation-chase-white-rabbit-ngo) - Social impact initiatives
 - [🏗️ Infrastructure](https://github.com/tiation/tiation-rigger-infrastructure) - Enterprise infrastructure
-- [🤖 AI Agents](https://github.com/tiation/tiation-ai-agents) - Intelligent automation
-- [📝 CMS](https://github.com/tiation/tiation-cms) - Content management system
-- [⚡ Terminal Workflows](https://github.com/tiation/tiation-terminal-workflows) - Developer tools
 
 ---
-*Built with 💜 by the Tiation team*
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🌟 About Tiation
+
+**Tiation** is a leading provider of enterprise-grade software solutions, specializing in automation, productivity, and system integration tools. Our mission is to empower organizations with cutting-edge technology that drives efficiency and innovation.
+
+### Our Solutions
+
+- **Automation Platform**: Comprehensive business process automation
+- **Developer Tools**: Professional development and deployment tools
+- **Enterprise Integration**: Seamless system integration solutions
+- **Security Framework**: Advanced security and compliance tools
+
+### Connect With Us
+
+- **Website**: [https://github.com/tiation](https://github.com/tiation)
+- **GitHub**: [https://github.com/tiation](https://github.com/tiation)
+- **LinkedIn**: [Tiation Company](https://linkedin.com/company/tiation)
+- **Twitter**: [@TiationTech](https://twitter.com/TiationTech)
+
+---
+
+<div align="center">
+  <p>
+    <strong>Built with ❤️ by the Tiation Team</strong>
+  </p>
+  <p>
+    <a href="https://github.com/tiation">
+      <img src="https://img.shields.io/badge/Powered%20by-Tiation-cyan.svg" alt="Powered by Tiation">
+    </a>
+  </p>
+</div>
