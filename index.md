@@ -1,29 +1,63 @@
 ---
 layout: default
-title: tiation-ai-agents
+title: Tiation AI Agents
 ---
 
-# tiation-ai-agents
+# Tiation AI Agents
 
-Enterprise-grade solution with dark neon theme and professional documentation.
+**Enterprise AI Automation Platform** with dark neon theme and professional documentation.
 
-## Features
+## 🚀 Overview
 
-- 🎯 **Enterprise Grade**: Professional-grade solution built with enterprise standards
-- 🎨 **Dark Neon Theme**: Beautiful dark theme with cyan/magenta gradient accents
-- 🔒 **Secure**: Built-in security features and compliance standards
-- 📱 **Responsive**: Optimized for all devices and screen sizes
+Intelligent AI agents for automation, customer service, and task management with natural language processing capabilities.
 
-## Links
+## ✨ Key Features
 
-- [Repository](https://github.com/tiaastor/tiation-ai-agents)
-- [Issues](https://github.com/tiaastor/tiation-ai-agents/issues)
-- [Documentation](https://github.com/tiaastor/tiation-ai-agents/wiki)
+- 🎯 **Natural Language Processing**: Advanced NLP capabilities for human-like interactions
+- 🔧 **Task Automation**: Intelligent task scheduling and execution with adaptive learning
+- 🌟 **Multi-Platform Support**: Deploy across web, mobile, and desktop environments
+- 🛡️ **Enterprise Security**: Built-in security features and compliance standards
+- 📊 **Analytics & Insights**: Comprehensive monitoring and analytics
+- 🎨 **Dark Neon Theme**: Beautiful dark interface with cyan/magenta gradient flares
 
-## Contact
+## 🔗 Quick Links
 
-For support: [tiatheone@protonmail.com](mailto:tiatheone@protonmail.com)
+- [🚀 Get Started](https://github.com/tiation/tiation-ai-agents)
+- [📖 Documentation](docs/)
+- [🐛 Issues](https://github.com/tiation/tiation-ai-agents/issues)
+- [❓ FAQ](docs/faq.md)
+- [🛠️ Troubleshooting](docs/troubleshooting.md)
+
+## 🏗️ Technology Stack
+
+### Frontend
+- React & Next.js
+- TypeScript
+- Tailwind CSS
+
+### Backend
+- Python & FastAPI
+- OpenAI Integration
+- Redis & MongoDB
+
+### Infrastructure
+- Docker & Kubernetes
+- CI/CD Pipeline
+- Cloud Deployment
+
+## 🤝 Support
+
+For support and inquiries: [tiatheone@protonmail.com](mailto:tiatheone@protonmail.com)
+
+## 🔮 Tiation Ecosystem
+
+Part of the comprehensive Tiation enterprise software ecosystem:
+
+- [🌟 AI Platform](https://github.com/tiation/tiation-ai-platform)
+- [⚡ Terminal Workflows](https://github.com/tiation/tiation-terminal-workflows)
+- [🐳 Docker Solutions](https://github.com/tiation/tiation-docker-debian)
+- [📝 CMS](https://github.com/tiation/tiation-cms)
 
 ---
 
-Built with ❤️ and enterprise-grade standards by [Tiation](https://github.com/tiaastor)
+**Built with ❤️ and enterprise-grade standards by [Tiation Team](https://github.com/tiation)**
