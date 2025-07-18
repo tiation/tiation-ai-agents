@@ -1,54 +1,110 @@
-title: Tiation AI Agents
-description: Enterprise AI Automation Platform for Business Process Automation
-url: "https://tiation.github.io"
+# GitHub Pages Configuration for tiation-ai-agents
+# Dark Neon Theme with Cyan Gradient Flares
+
+title: "tiation ai agents"
+description: "Enterprise-grade solution with professional documentation and dark neon theme"
 baseurl: "/tiation-ai-agents"
+url: "https://tiaastor.github.io"
 
-# Build settings
-markdown: kramdown
-highlighter: rouge
-remote_theme: tiation/tiation-github-pages-theme
-
-# GitHub Pages settings
-repository: tiation/tiation-ai-agents
-github_username: tiation
-
-# SEO settings
-author: Tiation
-twitter_username: tiation
-linkedin_username: tiation
-
-# Site settings
-lang: en
-timezone: America/New_York
-
-# Navigation
-nav_links:
-  - name: Home
-    url: /
-  - name: Features
-    url: /#features
-  - name: About
-    url: /#about
-  - name: GitHub
-    url: https://github.com/tiation/tiation-ai-agents
-
-# Plugins
+# Theme Configuration
+theme: jekyll-theme-cayman
 plugins:
-  - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-feed
+
+# SEO and Social
+author:
+  name: "Tia Astor"
+  email: "tia@tiation.com"
+  github: "TiaAstor"
+
+social:
+  github: "TiaAstor"
+  twitter: "TiaAstor"
+
+# GitHub Pages Settings
+repository: "TiaAstor/tiation-ai-agents"
+github_username: "TiaAstor"
+
+# Navigation
+navigation:
+  - title: "Home"
+    url: "/"
+  - title: "Documentation"
+    url: "/docs/"
+  - title: "API Reference"
+    url: "/api/"
+  - title: "GitHub"
+    url: "https://github.com/TiaAstor/tiation-ai-agents"
+
+# Markdown Settings
+markdown: kramdown
+kramdown:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
 
 # Exclude from processing
 exclude:
+  - node_modules/
+  - vendor/
+  - .bundle/
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
   - Gemfile
   - Gemfile.lock
-  - node_modules
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
-  - src/
-  - tests/
-  - requirements.txt
-  - .gitignore
-  - README.md
+  - README_OLD.md
+  - scripts/
+  - .git/
+  - .github/
+
+# Include
+include:
+  - .htaccess
+  - _pages
+  - docs/
+  - api/
+
+# Collections
+collections:
+  docs:
+    output: true
+    permalink: /:collection/:name/
+  examples:
+    output: true
+    permalink: /:collection/:name/
+
+# Default settings
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+      author: "Tia Astor"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Tia Astor"
+  - scope:
+      path: ""
+      type: "docs"
+    values:
+      layout: "doc"
+      nav: true
+
+# Custom variables
+custom:
+  theme_color: "#00D9FF"
+  accent_color: "#FF0080"
+  background_color: "#0A0A0A"
+  text_color: "#FFFFFF"
+  highlight_color: "#00FF88"
