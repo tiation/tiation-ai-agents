@@ -131,8 +131,261 @@
             transition: color 0.3s ease;
         }
         
-        .nav-links a:hover {
+.nav-links a:hover {
             color: var(--primary-color);
+        }
+        
+        .pricing-section {
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.05), rgba(255, 0, 128, 0.05));
+            padding: 5rem 0;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .pricing-card {
+            background: var(--card-background);
+            border-radius: 16px;
+            padding: 2.5rem;
+            border: 1px solid var(--border-color);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .pricing-card.featured {
+            border: 2px solid var(--primary-color);
+            transform: scale(1.05);
+            animation: pulse-glow 2s infinite;
+        }
+        
+        .pricing-card.featured::before {
+            content: 'MOST POPULAR';
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            color: var(--background-color);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            z-index: 1;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0, 217, 255, 0.2);
+        }
+        
+        .pricing-card.featured:hover {
+            transform: scale(1.08) translateY(-10px);
+        }
+        
+        .pricing-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .pricing-title {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .pricing-description {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        
+        .pricing-price {
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .pricing-amount {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--text-color);
+            font-family: 'Orbitron', monospace;
+        }
+        
+        .pricing-period {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+        
+        .pricing-features li {
+            padding: 0.5rem 0;
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .pricing-features li::before {
+            content: '✓';
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+        
+        .pricing-features li.unavailable {
+            color: var(--text-muted);
+            opacity: 0.5;
+        }
+        
+        .pricing-features li.unavailable::before {
+            content: '✗';
+            color: var(--text-muted);
+        }
+        
+        .pricing-button {
+            width: 100%;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            color: var(--background-color);
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+        }
+        
+        .pricing-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 217, 255, 0.3);
+        }
+        
+        .pricing-button.secondary {
+            background: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+        
+        .pricing-button.secondary:hover {
+            background: var(--primary-color);
+            color: var(--background-color);
+        }
+        
+        .saas-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+            margin: 4rem 0;
+        }
+        
+        .saas-feature {
+            background: var(--card-background);
+            border-radius: 12px;
+            padding: 2rem;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+        
+        .saas-feature:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 217, 255, 0.15);
+        }
+        
+        .saas-feature h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+        
+        .saas-feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .testimonial {
+            background: var(--card-background);
+            border-radius: 12px;
+            padding: 2rem;
+            border: 1px solid var(--border-color);
+            position: relative;
+        }
+        
+        .testimonial::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            font-size: 4rem;
+            color: var(--primary-color);
+            opacity: 0.3;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1rem;
+            color: var(--text-muted);
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        .testimonial-company {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .stat-card {
+            background: var(--card-background);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 217, 255, 0.15);
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            font-family: 'Orbitron', monospace;
+        }
+        
+        .stat-label {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
         }
         
         .hero {
@@ -436,6 +689,7 @@
             <a href="#" class="logo">🤖 Tiation AI Agents</a>
             <ul class="nav-links">
                 <li><a href="#features">Features</a></li>
+                <li><a href="#pricing">Pricing</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#ecosystem">Ecosystem</a></li>
                 <li><a href="https://github.com/tiation/tiation-ai-agents">GitHub</a></li>
@@ -496,6 +750,155 @@
                     <span class="feature-icon">🎨</span>
                     <h3>Dark Neon Theme</h3>
                     <p>Beautiful dark interface with cyan/magenta gradient flares for modern aesthetics.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- SaaS Pricing Section -->
+    <section id="pricing" class="pricing-section">
+        <div class="container">
+            <h2 class="section-title">Choose Your Plan</h2>
+            <p class="section-subtitle">Flexible pricing options designed for businesses of all sizes</p>
+            
+            <div class="pricing-grid">
+                <!-- Starter Plan -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Starter</h3>
+                        <p class="pricing-description">Perfect for small teams and startups</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="pricing-amount">$49</span>
+                        <span class="pricing-period">/month</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Up to 5 AI agents</li>
+                        <li>10,000 API calls/month</li>
+                        <li>Basic NLP capabilities</li>
+                        <li>Email support</li>
+                        <li>Dashboard analytics</li>
+                        <li class="unavailable">Advanced integrations</li>
+                        <li class="unavailable">Custom models</li>
+                        <li class="unavailable">Priority support</li>
+                    </ul>
+                    <a href="#" class="pricing-button secondary">Start Free Trial</a>
+                </div>
+                
+                <!-- Professional Plan -->
+                <div class="pricing-card featured">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Professional</h3>
+                        <p class="pricing-description">For growing businesses and teams</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="pricing-amount">$149</span>
+                        <span class="pricing-period">/month</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Up to 25 AI agents</li>
+                        <li>100,000 API calls/month</li>
+                        <li>Advanced NLP & ML</li>
+                        <li>Priority support</li>
+                        <li>Advanced analytics</li>
+                        <li>Custom integrations</li>
+                        <li>Multi-language support</li>
+                        <li class="unavailable">Dedicated account manager</li>
+                    </ul>
+                    <a href="#" class="pricing-button">Get Started</a>
+                </div>
+                
+                <!-- Enterprise Plan -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Enterprise</h3>
+                        <p class="pricing-description">For large organizations with custom needs</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="pricing-amount">$499</span>
+                        <span class="pricing-period">/month</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Unlimited AI agents</li>
+                        <li>Unlimited API calls</li>
+                        <li>Custom AI models</li>
+                        <li>24/7 dedicated support</li>
+                        <li>Advanced security</li>
+                        <li>On-premise deployment</li>
+                        <li>Custom integrations</li>
+                        <li>Dedicated account manager</li>
+                    </ul>
+                    <a href="#" class="pricing-button">Contact Sales</a>
+                </div>
+            </div>
+            
+            <!-- SaaS Features -->
+            <div class="saas-features">
+                <div class="saas-feature">
+                    <span class="saas-feature-icon">🔄</span>
+                    <h3>Subscription Management</h3>
+                    <p>Flexible billing cycles, automatic renewals, and easy plan upgrades. Manage your subscription with enterprise-grade billing infrastructure.</p>
+                </div>
+                <div class="saas-feature">
+                    <span class="saas-feature-icon">📊</span>
+                    <h3>Usage Analytics</h3>
+                    <p>Real-time usage tracking, detailed analytics, and comprehensive reporting. Monitor your AI agents' performance and optimize costs.</p>
+                </div>
+                <div class="saas-feature">
+                    <span class="saas-feature-icon">🔧</span>
+                    <h3>API Management</h3>
+                    <p>Rate limiting, API key management, and webhook integration. Full control over your AI agents with enterprise-grade API infrastructure.</p>
+                </div>
+                <div class="saas-feature">
+                    <span class="saas-feature-icon">🎯</span>
+                    <h3>Multi-Tenant Architecture</h3>
+                    <p>Secure data isolation, role-based access control, and team management. Perfect for agencies and enterprise organizations.</p>
+                </div>
+            </div>
+            
+            <!-- Stats Section -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">99.9%</div>
+                    <div class="stat-label">Uptime SLA</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Enterprise Clients</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">10M+</div>
+                    <div class="stat-label">API Calls/Month</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Support Available</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">What Our Customers Say</h2>
+            <p class="section-subtitle">Trusted by leading companies worldwide</p>
+            
+            <div class="testimonials">
+                <div class="testimonial">
+                    <p class="testimonial-text">Tiation AI Agents transformed our customer support operations. We've seen a 300% increase in efficiency and our customers love the instant, intelligent responses.</p>
+                    <div class="testimonial-author">Sarah Johnson</div>
+                    <div class="testimonial-company">CTO, TechCorp Inc.</div>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-text">The enterprise-grade security and scalability made this the perfect choice for our Fortune 500 company. The dark neon theme is just a bonus!</p>
+                    <div class="testimonial-author">Michael Chen</div>
+                    <div class="testimonial-company">VP Engineering, GlobalTech</div>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-text">Implementation was seamless and the API documentation is fantastic. Our development team was up and running in hours, not days.</p>
+                    <div class="testimonial-author">Emily Rodriguez</div>
+                    <div class="testimonial-company">Lead Developer, StartupXYZ</div>
                 </div>
             </div>
         </div>

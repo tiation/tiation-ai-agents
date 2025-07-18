@@ -1,74 +1,120 @@
 ---
 layout: default
-title: Tiation AI Agents
+title: Tiation AI Agents - Enterprise AI Automation Platform
+description: "Intelligent AI agents for automation, customer service, and task management with natural language processing"
 ---
 
-<div class="ai-hero">
-  <div class="matrix-bg"></div>
+<div class="tiation-hero">
+  <div class="cyber-grid"></div>
   <div class="hero-content">
-    <h1 class="ai-title">
-      <span class="ai-icon">🤖</span>
-      <span class="typing-text">Tiation AI Agents</span>
+    <div class="hero-badge">
+      <span class="badge-icon">🔮</span>
+      <span class="badge-text">TIATION ECOSYSTEM</span>
+    </div>
+    <h1 class="hero-title">
+      <span class="hero-icon">🚀</span>
+      <span class="gradient-text">Tiation Ai Agents</span>
     </h1>
-    <p class="ai-subtitle">Enterprise-grade AI automation platform for autonomous business processes</p>
-    <div class="feature-cards">
-      <div class="card card-1">
-        <div class="card-icon">⚡</div>
-        <h3>Lightning Fast</h3>
-        <p>10,000+ ops/sec</p>
+    <p class="hero-subtitle">Enterprise-grade intelligent AI agents for automation, customer service, and task management</p>
+    
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-number">10,000+</div>
+        <div class="stat-label">Operations/Second</div>
       </div>
-      <div class="card card-2">
-        <div class="card-icon">🔒</div>
-        <h3>Enterprise Security</h3>
-        <p>SOC2 Compliant</p>
+      <div class="stat-item">
+        <div class="stat-number">99.9%</div>
+        <div class="stat-label">Uptime SLA</div>
       </div>
-      <div class="card card-3">
-        <div class="card-icon">🎯</div>
-        <h3>99.9% Uptime</h3>
-        <p>Always Available</p>
+      <div class="stat-item">
+        <div class="stat-number">SOC2</div>
+        <div class="stat-label">Compliance</div>
       </div>
+      <div class="stat-item">
+        <div class="stat-number">24/7</div>
+        <div class="stat-label">AI Monitoring</div>
+      </div>
+    </div>
+    
+    <div class="hero-cta">
+      <a href="#quick-start" class="btn-primary">🚀 Get Started</a>
+      <a href="#architecture" class="btn-secondary">🏗️ View Architecture</a>
+      <a href="https://github.com/tiation/tiation-ai-agents" class="btn-tertiary">📁 View Code</a>
     </div>
   </div>
 </div>
 
-<nav class="sticky-nav">
+<nav class="docs-nav">
   <div class="nav-container">
-    <a href="#features" class="nav-item active">🚀 Features</a>
+    <a href="#features" class="nav-item active">✨ Features</a>
     <a href="#architecture" class="nav-item">🏗️ Architecture</a>
     <a href="#quick-start" class="nav-item">⚡ Quick Start</a>
     <a href="#api" class="nav-item">📚 API</a>
     <a href="#deployment" class="nav-item">🚀 Deploy</a>
+    <a href="#support" class="nav-item">🆘 Support</a>
   </div>
 </nav>
 
 <style>
-.ai-hero {
-  position: relative;
-  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-  color: white;
-  padding: 4rem 2rem;
-  text-align: center;
-  border-radius: 1rem;
-  margin-bottom: 2rem;
-  overflow: hidden;
+/* Tiation Dark Neon Theme */
+:root {
+  --primary-color: #00ffff;
+  --secondary-color: #ff00ff;
+  --accent-color: #00ff88;
+  --background-dark: #0a0a0a;
+  --background-card: #1a1a2e;
+  --text-primary: #ffffff;
+  --text-secondary: #b0b0b0;
 }
 
-.matrix-bg {
+.tiation-hero {
+  position: relative;
+  background: linear-gradient(135deg, var(--background-dark) 0%, var(--background-card) 50%, #16213e 100%);
+  color: var(--text-primary);
+  padding: 4rem 2rem;
+  text-align: center;
+  border-radius: 15px;
+  margin-bottom: 3rem;
+  overflow: hidden;
+  border: 1px solid rgba(0, 255, 255, 0.3);
+}
+
+.cyber-grid {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="matrix" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="%23ffffff" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23matrix)"/></svg>');
-  animation: matrix-flow 20s linear infinite;
+  background: 
+    linear-gradient(90deg, transparent 98%, rgba(0, 255, 255, 0.1) 100%),
+    linear-gradient(180deg, transparent 98%, rgba(255, 0, 255, 0.1) 100%);
+  background-size: 50px 50px;
+  animation: grid-flow 20s linear infinite;
 }
 
-@keyframes matrix-flow {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-100px); }
+@keyframes grid-flow {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(50px, 50px); }
 }
 
-.ai-title {
+.hero-badge {
+  display: inline-block;
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  color: var(--background-dark);
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+.badge-icon {
+  margin-right: 0.5rem;
+}
+
+.hero-title {
   font-size: 3.5rem;
   font-weight: bold;
   margin-bottom: 1rem;
@@ -76,90 +122,147 @@ title: Tiation AI Agents
   z-index: 2;
 }
 
-.ai-icon {
+.hero-icon {
   display: inline-block;
-  animation: robot-bounce 2s ease-in-out infinite;
+  margin-right: 1rem;
+  animation: pulse-glow 2s ease-in-out infinite;
 }
 
-@keyframes robot-bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+@keyframes pulse-glow {
+  0%, 100% { 
+    transform: scale(1);
+    filter: drop-shadow(0 0 10px var(--primary-color));
+  }
+  50% { 
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 20px var(--secondary-color));
+  }
 }
 
-.typing-text {
-  border-right: 3px solid #fff;
-  animation: typing 3s steps(20, end), blink 1s infinite;
+.gradient-text {
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.5));
 }
 
-@keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
-}
-
-@keyframes blink {
-  0%, 50% { border-color: transparent; }
-  51%, 100% { border-color: #fff; }
-}
-
-.ai-subtitle {
-  font-size: 1.5rem;
-  margin-bottom: 3rem;
-  opacity: 0.9;
+.hero-subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  color: var(--text-secondary);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
   position: relative;
   z-index: 2;
 }
 
-.feature-cards {
+.hero-stats {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 2rem;
-  margin-top: 2rem;
+  margin: 3rem 0;
   position: relative;
   z-index: 2;
 }
 
-.card {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 2rem;
-  border-radius: 1rem;
+.stat-item {
+  background: rgba(0, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 255, 255, 0.3);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
   transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
+  border-color: var(--primary-color);
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.hero-cta {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+  position: relative;
+  z-index: 2;
+}
+
+.btn-primary {
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  color: var(--background-dark);
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  border: none;
   cursor: pointer;
 }
 
-.card:hover {
-  transform: translateY(-10px);
-  background: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 255, 255, 0.3);
 }
 
-.card-icon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+.btn-secondary {
+  background: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
 }
 
-.card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-  color: white;
+.btn-secondary:hover {
+  background: var(--primary-color);
+  color: var(--background-dark);
+  transform: translateY(-3px);
 }
 
-.card p {
-  opacity: 0.8;
-  margin: 0;
+.btn-tertiary {
+  background: transparent;
+  color: var(--text-secondary);
+  border: 1px solid var(--text-secondary);
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
 }
 
-.card-1 { animation-delay: 0.1s; }
-.card-2 { animation-delay: 0.2s; }
-.card-3 { animation-delay: 0.3s; }
+.btn-tertiary:hover {
+  background: var(--text-secondary);
+  color: var(--background-dark);
+  transform: translateY(-3px);
+}
 
-.sticky-nav {
+.docs-nav {
   position: sticky;
   top: 0;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(10, 10, 10, 0.95);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid rgba(0, 255, 255, 0.3);
   z-index: 1000;
   padding: 1rem 0;
   margin-bottom: 2rem;
@@ -173,29 +276,32 @@ title: Tiation AI Agents
 }
 
 .nav-item {
-  padding: 0.5rem 1rem;
+  padding: 0.7rem 1.5rem;
   text-decoration: none;
-  color: #333;
+  color: var(--text-secondary);
   border-radius: 25px;
   transition: all 0.3s ease;
   font-weight: 500;
+  border: 1px solid transparent;
 }
 
 .nav-item:hover, .nav-item.active {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  color: var(--background-dark);
   transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 255, 255, 0.3);
 }
 
 @media (max-width: 768px) {
-  .ai-title { font-size: 2.5rem; }
-  .feature-cards { grid-template-columns: 1fr; }
+  .hero-title { font-size: 2.5rem; }
+  .hero-stats { grid-template-columns: repeat(2, 1fr); }
+  .hero-cta { flex-direction: column; align-items: center; }
   .nav-container { gap: 1rem; }
 }
 </style>
 
 <script>
-// Smooth scrolling for navigation
+// Enhanced navigation with smooth scrolling
 document.addEventListener('DOMContentLoaded', function() {
   const navItems = document.querySelectorAll('.nav-item');
   
@@ -206,7 +312,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const targetElement = document.getElementById(targetId);
       
       if (targetElement) {
-        targetElement.scrollIntoView({ behavior: 'smooth' });
+        targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
       
       // Update active state
@@ -215,8 +321,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
   
-  // Intersection Observer for nav highlighting
-  const sections = document.querySelectorAll('h2[id]');
+  // Intersection Observer for automatic nav highlighting
+  const sections = document.querySelectorAll('h2[id], h3[id]');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -226,32 +332,49 @@ document.addEventListener('DOMContentLoaded', function() {
         if (activeNav) activeNav.classList.add('active');
       }
     });
-  }, { threshold: 0.5 });
+  }, { threshold: 0.6 });
   
   sections.forEach(section => observer.observe(section));
 });
 </script>
 
-## Features
+## ✨ Features {#features}
 
-- **🤖 Autonomous AI Agents**: Self-learning agents that adapt to business processes
-- **🔒 Enterprise Security**: SOC2 compliant with end-to-end encryption
-- **📊 Advanced Analytics**: Real-time insights and performance metrics
-- **🔧 Easy Integration**: RESTful APIs and pre-built connectors
-- **⚡ Scalable Architecture**: Handle thousands of concurrent processes
-- **🎨 Visual Workflow Builder**: Drag-and-drop interface for complex workflows
+- **🎯 Natural Language Processing**: Advanced natural language processing capabilities
+- **🎯 Task Automation**: Advanced task automation capabilities
+- **🎯 Multi-Platform Support**: Advanced multi-platform support capabilities
+- **🎯 Learning Capabilities**: Advanced learning capabilities capabilities
 
-## Architecture
 
-Tiation AI Agents uses a microservices architecture with the following components:
+### 🏢 Enterprise-Grade Capabilities
+- **🔒 Security**: SOC2 Type II compliance with end-to-end encryption
+- **📊 Analytics**: Real-time monitoring and performance insights
+- **🔧 Integration**: Seamless API integration with existing systems
+- **⚡ Performance**: High-performance architecture with 99.9% uptime
 
-- **Agent Engine**: Core AI processing and decision-making
-- **Workflow Orchestrator**: Manages complex multi-step processes
-- **Integration Layer**: Connects to external systems and APIs
-- **Analytics Engine**: Provides insights and performance monitoring
-- **Security Layer**: Handles authentication, authorization, and encryption
+## 🏗️ Architecture {#architecture}
 
-## Quick Start
+![Architecture Diagram](../assets/architecture/tiation-ai-agents-architecture.svg)
+
+### 🔧 Technology Stack
+**Python, FastAPI, OpenAI, React, MongoDB, Docker, Kubernetes**
+
+### 📊 System Components
+- **Core Engine**: Primary processing and business logic
+- **API Gateway**: RESTful API interface and authentication
+- **Data Layer**: Secure data storage and management
+- **Integration Layer**: External system connectivity
+- **Security Layer**: Authentication, authorization, and encryption
+- **Monitoring**: Real-time performance and health monitoring
+
+## ⚡ Quick Start {#quick-start}
+
+### 📋 Prerequisites
+- Modern web browser or development environment
+- Git for version control
+- Required dependencies (see package.json/requirements.txt)
+
+### 🚀 Installation
 
 1. **Clone the repository**
    ```bash
@@ -261,73 +384,151 @@ Tiation AI Agents uses a microservices architecture with the following component
 
 2. **Install dependencies**
    ```bash
+   npm install
+   # or
    pip install -r requirements.txt
    ```
 
-3. **Set up environment**
+3. **Configuration**
    ```bash
    cp .env.example .env
    # Edit .env with your configuration
    ```
 
-4. **Start services**
+4. **Start the application**
    ```bash
-   docker-compose up -d
-   ```
-
-5. **Initialize and start**
-   ```bash
-   python manage.py migrate
-   python manage.py createsuperuser
+   npm start
+   # or
    python manage.py runserver
    ```
 
-## Enterprise Features
+### 🔧 Development Setup
+```bash
+# Development mode
+npm run dev
 
-### Advanced AI Capabilities
-- **Natural Language Processing**: Process and understand human language
-- **Computer Vision**: Analyze images and documents
-- **Predictive Analytics**: Forecast trends and outcomes
-- **Decision Trees**: Complex rule-based decision making
+# Run tests
+npm test
 
-### Security & Compliance
-- **SOC2 Type II Compliance**: Audited security controls
-- **GDPR Compliance**: Data protection and privacy
-- **Role-Based Access Control**: Fine-grained permissions
-- **Audit Logging**: Complete activity tracking
+# Build for production
+npm run build
+```
 
-### Integration Capabilities
-- **CRM Systems**: Salesforce, HubSpot, Microsoft Dynamics
-- **ERP Systems**: SAP, Oracle, NetSuite
-- **Communication**: Slack, Teams, Email
-- **Cloud Platforms**: AWS, Azure, Google Cloud
+## 📚 API Reference {#api}
 
-## Performance Metrics
+### 🔌 REST API Endpoints
 
-- **Processing Speed**: 10,000+ operations per second
-- **Uptime**: 99.9% availability SLA
-- **Scalability**: Handles 1M+ concurrent users
-- **Response Time**: <100ms average API response
+#### Authentication
+```http
+POST /api/auth/login
+Content-Type: application/json
 
-## 📚 Additional Resources
+{
+  "username": "user@example.com",
+  "password": "secure_password"
+}
+```
 
-- [FAQ](faq.md) - Frequently asked questions
-- [Troubleshooting](troubleshooting.md) - Common issues and solutions
-- [Contributing](../CONTRIBUTING.md) - How to contribute to this project
-- [License](../LICENSE) - Project license information
+#### Core Operations
+```http
+GET /api/v1/operations
+Authorization: Bearer {token}
+```
 
-## 🎨 Theme Information
+### 📊 Response Format
+```json
+{
+  "status": "success",
+  "data": {},
+  "message": "Operation completed successfully",
+  "timestamp": "2024-01-01T00:00:00Z"
+}
+```
 
-This project features a **dark neon theme** with:
-- Cyan gradient flares
-- Professional enterprise styling
-- Mobile-responsive design
-- Accessibility features
+## 🚀 Deployment {#deployment}
 
-## 🚀 Quick Links
+### 🐳 Docker Deployment
+```bash
+# Build Docker image
+docker build -t tiation-ai-agents .
 
-- [GitHub Repository](https://github.com/TiaAstor/tiation-ai-agents)
-- [Live Demo](https://tiaastor.github.io/tiation-ai-agents)
-- [Documentation](https://github.com/TiaAstor/tiation-ai-agents/wiki)
-- [Issues](https://github.com/TiaAstor/tiation-ai-agents/issues)
+# Run container
+docker run -p 8080:8080 tiation-ai-agents
+```
 
+### ☁️ Cloud Deployment
+- **AWS**: ECS, EKS, Lambda supported
+- **Azure**: Container Instances, AKS supported
+- **Google Cloud**: GKE, Cloud Run supported
+
+### 🔧 Production Configuration
+```yaml
+# docker-compose.yml
+version: '3.8'
+services:
+  app:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      - NODE_ENV=production
+      - DATABASE_URL=${DATABASE_URL}
+```
+
+## 🆘 Support {#support}
+
+### 📞 Getting Help
+- **📚 Documentation**: [Full documentation](https://tiation.github.io/tiation-ai-agents)
+- **❓ FAQ**: [Frequently asked questions](faq.md)
+- **🐛 Issues**: [GitHub Issues](https://github.com/tiation/tiation-ai-agents/issues)
+- **💬 Discussions**: [GitHub Discussions](https://github.com/tiation/tiation-ai-agents/discussions)
+
+### 🏢 Enterprise Support
+- **📧 Email**: [tiatheone@protonmail.com](mailto:tiatheone@protonmail.com)
+- **🔒 Priority Support**: Available for enterprise customers
+- **🎯 Custom Development**: Tailored solutions available
+- **📊 SLA**: 99.9% uptime guarantee
+
+### 🤝 Contributing
+- **🔀 Pull Requests**: Welcome and encouraged
+- **📋 Code Standards**: Follow established patterns
+- **✅ Testing**: Comprehensive test coverage required
+- **📖 Documentation**: Keep docs updated with changes
+
+## 📊 Use Cases
+
+- **Customer Service**: Professional implementation
+- **Task Management**: Professional implementation
+- **Process Automation**: Professional implementation
+
+
+## 🎯 Performance Metrics
+
+| Metric | Value | Description |
+|--------|-------|-------------|
+| Response Time | <100ms | Average API response time |
+| Throughput | 10k+ req/s | Maximum requests per second |
+| Uptime | 99.9% | Service availability SLA |
+| Scalability | 1M+ users | Concurrent user support |
+
+## 🔮 Tiation Ecosystem
+
+This repository is part of the Tiation ecosystem:
+
+- [🌟 Tiation Platform](https://github.com/tiation/tiation-ai-platform) - Enterprise AI platform
+- [🤖 AI Agents](https://github.com/tiation/tiation-ai-agents) - Intelligent automation
+- [⚡ Terminal Workflows](https://github.com/tiation/tiation-terminal-workflows) - Developer tools
+- [🐳 Docker Solutions](https://github.com/tiation/tiation-docker-debian) - Container orchestration
+- [📝 CMS](https://github.com/tiation/tiation-cms) - Content management system
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+<div align="center">
+  <strong>Built with 💜 by the Tiation Team</strong>
+  <br>
+  <em>Professional • Scalable • Mission-Driven</em>
+</div>
