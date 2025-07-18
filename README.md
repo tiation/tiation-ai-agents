@@ -320,3 +320,35 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
     <img src="https://img.shields.io/github/stars/TiaAstor/tiation-ai-agents?style=social&label=Star&maxAge=2592000" alt="GitHub Stars">
   </a>
 </div>
+
+---
+
+## 📞 Support & Contact
+
+- 📧 **Enterprise Support**: [tiatheone@protonmail.com](mailto:tiatheone@protonmail.com)
+- 🐛 **Issues**: [GitHub Issues](https://github.com/tiaastor/tiation-ai-agents/issues)
+- 📖 **Documentation**: [Wiki](https://github.com/tiaastor/tiation-ai-agents/wiki)
+- 🔗 **GitHub**: [Repository](https://github.com/tiaastor/tiation-ai-agents)
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🔗 Related Projects
+
+- [Tiation Terminal Workflows](https://github.com/tiaastor/tiation-terminal-workflows)
+- [Tiation Docker Debian](https://github.com/tiaastor/tiation-docker-debian)
+- [Tiation AI Platform](https://github.com/tiaastor/tiation-ai-platform)
+- [Tiation CMS](https://github.com/tiaastor/tiation-cms)
+
+---
+
+<div align="center">
+  **⭐ Star this repository if you find it helpful! ⭐**
+  
+  <p><strong>Built with ❤️ and enterprise-grade standards by <a href="https://github.com/tiaastor">Tiation</a></strong></p>
+</div>

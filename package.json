@@ -1,0 +1,92 @@
+{
+  "name": "tiation-ai-agents",
+  "version": "1.0.0",
+  "description": "Intelligent automation that empowers, not replaces - Enterprise AI solutions",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "node src/main.js",
+    "dev": "nodemon src/main.js",
+    "build": "npm run build:api && npm run build:web",
+    "build:api": "npm run copy-files",
+    "build:web": "cd web && npm run build",
+    "copy-files": "cp -r src/* dist/",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "lint": "eslint src/",
+    "lint:fix": "eslint src/ --fix",
+    "docker:build": "docker build -t tiation-ai-agents .",
+    "docker:run": "docker run -p 3000:3000 tiation-ai-agents",
+    "deploy": "npm run build && docker-compose up -d",
+    "setup": "npm install && cd web && npm install && cd ../TiationAIAgentsMobile && npm install"
+  },
+  "keywords": [
+    "ai",
+    "automation",
+    "enterprise",
+    "agents",
+    "saas",
+    "mobile-app",
+    "tiation"
+  ],
+  "author": {
+    "name": "Tia Astor",
+    "email": "tiatheone@protonmail.com",
+    "url": "https://tiation.github.io/TiaAstor/"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tiation/tiation-ai-agents.git"
+  },
+  "dependencies": {
+    "@tailwindcss/forms": "^0.5.10",
+    "@tailwindcss/typography": "^0.5.16",
+    "@types/node": "^20.0.0",
+    "@types/ws": "^8.5.5",
+    "axios": "^1.4.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
+    "framer-motion": "^10.16.0",
+    "lucide-react": "^0.263.1",
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "helmet": "^7.0.0",
+    "compression": "^1.7.4",
+    "express-rate-limit": "^6.8.1",
+    "jsonwebtoken": "^9.0.1",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.3.1",
+    "mongoose": "^7.4.0",
+    "redis": "^4.6.7",
+    "ws": "^8.13.0",
+    "node-cron": "^3.0.2",
+    "winston": "^3.10.0",
+    "joi": "^17.9.2",
+    "multer": "^1.4.5-lts.1",
+    "stripe": "^12.14.0",
+    "nodemailer": "^6.9.4",
+    "socket.io": "^4.7.2",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "jest": "^29.6.1",
+    "supertest": "^6.3.3",
+    "eslint": "^8.45.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^16.0.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "@types/jest": "^29.5.3",
+    "@types/express": "^4.17.17",
+    "@types/cors": "^2.8.13",
+    "@types/bcryptjs": "^2.4.2",
+    "@types/jsonwebtoken": "^9.0.2",
+    "@types/multer": "^1.4.7",
+    "@types/uuid": "^9.0.2"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  }
+}
