@@ -352,3 +352,19 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
   
   <p><strong>Built with ❤️ and enterprise-grade standards by <a href="https://github.com/tiaastor">Tiation</a></strong></p>
 </div>
+
+---
+
+## 🔮 Tiation Ecosystem
+
+This repository is part of the Tiation ecosystem. Explore related projects:
+
+- [🌟 TiaAstor](https://github.com/TiaAstor/TiaAstor) - Personal brand and story
+- [🐰 ChaseWhiteRabbit NGO](https://github.com/tiation/tiation-chase-white-rabbit-ngo) - Social impact initiatives
+- [🏗️ Infrastructure](https://github.com/tiation/tiation-rigger-infrastructure) - Enterprise infrastructure
+- [🤖 AI Agents](https://github.com/tiation/tiation-ai-agents) - Intelligent automation
+- [📝 CMS](https://github.com/tiation/tiation-cms) - Content management system
+- [⚡ Terminal Workflows](https://github.com/tiation/tiation-terminal-workflows) - Developer tools
+
+---
+*Built with 💜 by the Tiation team*

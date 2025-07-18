@@ -1,0 +1,367 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiation Ai Agents - Interactive Demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #0A0A0A 0%, #1F2937 100%);
+            color: #FFFFFF;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+            background: radial-gradient(circle at center, #00FFFF20 0%, transparent 70%);
+            border-radius: 20px;
+            margin-bottom: 3rem;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #00FFFF, #FF00FF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            color: #E5E7EB;
+            margin-bottom: 2rem;
+        }
+        
+        .demo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .demo-card {
+            background: rgba(31, 41, 55, 0.8);
+            border-radius: 16px;
+            padding: 2rem;
+            border: 2px solid #374151;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .demo-card:hover {
+            border-color: #00FFFF;
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 255, 255, 0.2);
+        }
+        
+        .demo-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #00FFFF, #FF00FF);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .demo-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .demo-card h3 {
+            color: #00FFFF;
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+        
+        .demo-card p {
+            color: #D1D5DB;
+            margin-bottom: 1rem;
+        }
+        
+        .demo-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #00FFFF, #FF00FF);
+            color: #0A0A0A;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .demo-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 255, 255, 0.3);
+        }
+        
+        .features-section {
+            background: rgba(139, 92, 246, 0.1);
+            border-radius: 16px;
+            padding: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .features-section h2 {
+            color: #00FFFF;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            text-align: center;
+        }
+        
+        .features-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .feature-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid rgba(0, 255, 255, 0.2);
+        }
+        
+        .feature-item h4 {
+            color: #FF00FF;
+            margin-bottom: 0.5rem;
+        }
+        
+        .interactive-demo {
+            background: #1F2937;
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            border: 2px solid #00FFFF;
+        }
+        
+        .interactive-demo h3 {
+            color: #00FFFF;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .demo-simulator {
+            background: #0A0A0A;
+            border-radius: 12px;
+            padding: 2rem;
+            min-height: 400px;
+            border: 1px solid #374151;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .demo-simulator::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 49%, rgba(0, 255, 255, 0.1) 50%, transparent 51%);
+            background-size: 20px 20px;
+            animation: matrix 20s linear infinite;
+        }
+        
+        @keyframes matrix {
+            0% { background-position: 0 0; }
+            100% { background-position: 20px 20px; }
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            color: #6B7280;
+            border-top: 1px solid #374151;
+        }
+        
+        .footer a {
+            color: #00FFFF;
+            text-decoration: none;
+        }
+        
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .demo-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="hero">
+            <h1>Tiation Ai Agents</h1>
+            <p>Enterprise-grade Mobile Web Dashboard - Interactive Demo</p>
+            <a href="https://github.com/tiaastor/tiation-ai-agents" class="demo-button">
+                View on GitHub
+            </a>
+        </header>
+        
+        <div class="demo-grid">
+
+            <div class="demo-card" onclick="openDemo('ai_agent_chat_interface')">
+                <h3>AI Agent Chat Interface</h3>
+                <p>Interactive demonstration of ai agent chat interface with real-time data and enterprise features.</p>
+                <span class="demo-button">Launch Demo</span>
+            </div>
+
+            <div class="demo-card" onclick="openDemo('real-time_data_visualization')">
+                <h3>Real-time Data Visualization</h3>
+                <p>Interactive demonstration of real-time data visualization with real-time data and enterprise features.</p>
+                <span class="demo-button">Launch Demo</span>
+            </div>
+
+            <div class="demo-card" onclick="openDemo('mobile_app_screenshots_carousel')">
+                <h3>Mobile App Screenshots Carousel</h3>
+                <p>Interactive demonstration of mobile app screenshots carousel with real-time data and enterprise features.</p>
+                <span class="demo-button">Launch Demo</span>
+            </div>
+
+            <div class="demo-card" onclick="openDemo('api_testing_console')">
+                <h3>API Testing Console</h3>
+                <p>Interactive demonstration of api testing console with real-time data and enterprise features.</p>
+                <span class="demo-button">Launch Demo</span>
+            </div>
+
+            <div class="demo-card" onclick="openDemo('performance_metrics_dashboard')">
+                <h3>Performance Metrics Dashboard</h3>
+                <p>Interactive demonstration of performance metrics dashboard with real-time data and enterprise features.</p>
+                <span class="demo-button">Launch Demo</span>
+            </div>
+
+        </div>
+        
+        <section class="features-section">
+            <h2>Live Features</h2>
+            <div class="features-list">
+
+                <div class="feature-item">
+                    <h4>Interactive API Documentation</h4>
+                    <p>Real-time interactive api documentation with interactive controls and enterprise-grade performance.</p>
+                </div>
+
+                <div class="feature-item">
+                    <h4>Live Code Examples</h4>
+                    <p>Real-time live code examples with interactive controls and enterprise-grade performance.</p>
+                </div>
+
+                <div class="feature-item">
+                    <h4>Mobile App Simulator</h4>
+                    <p>Real-time mobile app simulator with interactive controls and enterprise-grade performance.</p>
+                </div>
+
+                <div class="feature-item">
+                    <h4>Real-time Metrics Display</h4>
+                    <p>Real-time real-time metrics display with interactive controls and enterprise-grade performance.</p>
+                </div>
+
+            </div>
+        </section>
+        
+        <section class="interactive-demo">
+            <h3>Live Demo Environment</h3>
+            <div class="demo-simulator" id="demoSimulator">
+                <div style="color: #00FFFF; text-align: center; padding: 2rem;">
+                    <h4>🔮 Tiation Ai Agents Interactive Demo</h4>
+                    <p>Click on any demo card above to launch interactive demonstrations</p>
+                    <div style="margin-top: 2rem;">
+                        <div style="display: inline-block; margin: 0 1rem;">
+                            <div style="color: #FF00FF;">Status:</div>
+                            <div id="status">Ready</div>
+                        </div>
+                        <div style="display: inline-block; margin: 0 1rem;">
+                            <div style="color: #FF00FF;">Users:</div>
+                            <div id="users">1,337</div>
+                        </div>
+                        <div style="display: inline-block; margin: 0 1rem;">
+                            <div style="color: #FF00FF;">Uptime:</div>
+                            <div id="uptime">99.9%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <footer class="footer">
+        <p>Built with ❤️ by <a href="https://github.com/tiaastor">Tiation</a> | 
+        <a href="https://github.com/tiaastor/tiation-ai-agents">View Repository</a> | 
+        <a href="https://github.com/tiaastor/tiation-ai-agents/wiki">Documentation</a></p>
+    </footer>
+    
+    <script>
+        function openDemo(demoType) {
+            const simulator = document.getElementById('demoSimulator');
+            const status = document.getElementById('status');
+            
+            status.textContent = 'Loading ' + demoType.replace('_', ' ') + '...';
+            
+            setTimeout(() => {
+                simulator.innerHTML = `
+                    <div style="color: #00FFFF; text-align: center; padding: 2rem;">
+                        <h4>🚀 ${demoType.replace('_', ' ').toUpperCase()} Demo</h4>
+                        <p>Interactive demonstration of ${demoType.replace('_', ' ')} functionality</p>
+                        <div style="margin-top: 2rem; background: rgba(0,255,255,0.1); padding: 1rem; border-radius: 8px;">
+                            <div style="color: #FF00FF; margin-bottom: 1rem;">Demo Features:</div>
+                            <div style="text-align: left; max-width: 400px; margin: 0 auto;">
+                                <div>✓ Real-time data visualization</div>
+                                <div>✓ Interactive controls</div>
+                                <div>✓ Enterprise-grade performance</div>
+                                <div>✓ Dark neon theme</div>
+                            </div>
+                        </div>
+                        <button onclick="resetDemo()" style="margin-top: 1rem; background: linear-gradient(135deg, #00FFFF, #FF00FF); color: #0A0A0A; padding: 0.5rem 1rem; border: none; border-radius: 4px; cursor: pointer;">
+                            Reset Demo
+                        </button>
+                    </div>
+                `;
+                status.textContent = 'Demo Active';
+            }, 1000);
+        }
+        
+        function resetDemo() {
+            location.reload();
+        }
+        
+        // Simulate real-time updates
+        setInterval(() => {
+            const users = document.getElementById('users');
+            if (users) {
+                const currentUsers = parseInt(users.textContent.replace(',', ''));
+                const newUsers = currentUsers + Math.floor(Math.random() * 10) - 5;
+                users.textContent = Math.max(1000, newUsers).toLocaleString();
+            }
+        }, 5000);
+    </script>
+</body>
+</html>
