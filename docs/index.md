@@ -308,3 +308,26 @@ Tiation AI Agents uses a microservices architecture with the following component
 - **Uptime**: 99.9% availability SLA
 - **Scalability**: Handles 1M+ concurrent users
 - **Response Time**: <100ms average API response
+
+## 📚 Additional Resources
+
+- [FAQ](faq.md) - Frequently asked questions
+- [Troubleshooting](troubleshooting.md) - Common issues and solutions
+- [Contributing](../CONTRIBUTING.md) - How to contribute to this project
+- [License](../LICENSE) - Project license information
+
+## 🎨 Theme Information
+
+This project features a **dark neon theme** with:
+- Cyan gradient flares
+- Professional enterprise styling
+- Mobile-responsive design
+- Accessibility features
+
+## 🚀 Quick Links
+
+- [GitHub Repository](https://github.com/TiaAstor/tiation-ai-agents)
+- [Live Demo](https://tiaastor.github.io/tiation-ai-agents)
+- [Documentation](https://github.com/TiaAstor/tiation-ai-agents/wiki)
+- [Issues](https://github.com/TiaAstor/tiation-ai-agents/issues)
+
