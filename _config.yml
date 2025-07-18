@@ -1,68 +1,11 @@
-# GitHub Pages Configuration for tiation-ai-agents
-
-title: "🤖 Tiation AI Agents"
-description: "Intelligent automation that empowers, not replaces - Enterprise AI solutions by Tia Astor"
-url: "https://tiation.github.io/tiation-ai-agents"
+title: tiation-ai-agents
+description: Enterprise-grade solution with dark neon theme
+url: "https://tiaastor.github.io"
 baseurl: "/tiation-ai-agents"
-
-# Theme
 theme: minima
 plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
-
-# SEO
-author: 
-  name: "Tia Astor"
-  email: "tiatheone@protonmail.com"
-  url: "https://tiation.github.io/TiaAstor/"
-twitter:
-  username: tiation
-  card: summary_large_image
-
-# Repository
-repository: "https://github.com/tiation/tiation-ai-agents"
-
-# Build settings
-markdown: kramdown
-highlighter: rouge
-permalink: pretty
-
-# Exclude from processing
-exclude:
-  - node_modules/
-  - .cache/
-  - .parcel-cache/
-  - .DS_Store
-  - Thumbs.db
-
-# Include
-include:
-  - _pages
-  - promotional
-
-# Collections
-collections:
-  docs:
-    output: true
-    permalink: /:collection/:name/
-
-# Default settings
-defaults:
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
-      author: "Tiation"
-  - scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: "page"
-  - scope:
-      path: ""
-      type: "docs"
-    values:
-      layout: "doc"
+author: Tiation
+github_username: tiaastor
