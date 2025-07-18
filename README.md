@@ -1,26 +1,25 @@
 # 🤖 Tiation AI Agents
 
-<!-- Hero Image with Dark Neon Theme -->
 <div align="center">
-  <img src=".screenshots/hero-banner.png" alt="Tiation AI Agents - Enterprise AI Automation Platform" width="100%">
-</div>
 
-<div align="center">
-  
-[![Build Status](https://img.shields.io/badge/Build-Passing-00FF88?style=for-the-badge&logo=github-actions&logoColor=white)](https://github.com/TiaAstor/tiation-ai-agents/actions)
-[![Deployment](https://img.shields.io/badge/Deployment-Active-00D9FF?style=for-the-badge&logo=vercel&logoColor=white)](https://tiaastor.github.io/tiation-ai-agents)
-[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-00D9FF?style=for-the-badge&logo=github&logoColor=white)](https://tiaastor.github.io/tiation-ai-agents)
-[![Documentation](https://img.shields.io/badge/Documentation-Complete-00FF88?style=for-the-badge&logo=gitbook&logoColor=white)](https://github.com/TiaAstor/tiation-ai-agents/wiki)
-[![License](https://img.shields.io/badge/License-MIT-FF0080?style=for-the-badge&logo=opensourceinitiative&logoColor=white)](LICENSE)
-[![Status](https://img.shields.io/badge/Status-Production%20Ready-FFE500?style=for-the-badge&logo=checkmarx&logoColor=white)](https://github.com/TiaAstor/tiation-ai-agents)
-[![Security](https://img.shields.io/badge/Security-Verified-00FF88?style=for-the-badge&logo=security&logoColor=white)](https://github.com/TiaAstor/tiation-ai-agents/security)
-[![Quality](https://img.shields.io/badge/Quality-A+-00D9FF?style=for-the-badge&logo=codeclimate&logoColor=white)](https://github.com/TiaAstor/tiation-ai-agents)
+![Tiation AI Agents Banner](https://img.shields.io/badge/🔮_TIATION_ECOSYSTEM-AI_Powered_Automation-00FFFF?style=for-the-badge&labelColor=0A0A0A&color=FF00FF)
+
+**"Intelligent automation agents for enterprise workflows"**
+
+*AI-Powered • Scalable • Cross-Platform*
+
+[![Mobile App](https://img.shields.io/badge/📱_Mobile_App-React_Native-00FFFF?style=flat-square&labelColor=0A0A0A)](TiationAIAgentsMobile/)
+[![Web Demo](https://img.shields.io/badge/🌐_Web_Demo-Live_Dashboard-FF00FF?style=flat-square&labelColor=0A0A0A)](https://tiaastor.github.io/tiation-ai-agents)
+[![Documentation](https://img.shields.io/badge/📚_Documentation-Complete-007FFF?style=flat-square&labelColor=0A0A0A)](https://github.com/TiaAstor/tiation-ai-agents/wiki)
+[![API](https://img.shields.io/badge/🔧_API-RESTful-00FFFF?style=flat-square&labelColor=0A0A0A)](docs/api-reference.md)
 
 </div>
 
 ## 🚀 About
 
-**Brief, compelling description of what this project does and why it matters.**
+**Enterprise-grade AI automation platform featuring intelligent agents, cross-platform mobile applications, and comprehensive workflow management for modern businesses.**
+
+Tiation AI Agents combines advanced machine learning with intuitive interfaces to deliver powerful automation solutions. Our platform includes a full-featured React Native mobile app, web dashboard, and API ecosystem designed for scalability and enterprise deployment.
 
 <div align="center">
   <img src=".screenshots/demo-overview.png" alt="Project Overview" width="80%">
