@@ -1,0 +1,114 @@
+{
+  "appStoreMetadata": {
+    "appName": "Tiation AI Agents",
+    "subtitle": "Enterprise AI Automation Platform",
+    "description": "Transform your business with intelligent AI agents that automate complex workflows, monitor systems, and optimize performance in real-time. Tiation AI Agents delivers enterprise-grade automation with a sleek, intuitive interface.\n\n🤖 INTELLIGENT AUTOMATION\n• Deploy AI agents for complex business processes\n• Real-time monitoring and control\n• Advanced analytics and performance insights\n• Seamless integration with existing systems\n\n⚡ ENTERPRISE FEATURES\n• Multi-agent orchestration\n• Role-based access control\n• Custom workflow automation\n• Real-time alerts and notifications\n• Comprehensive audit trails\n\n📊 POWERFUL ANALYTICS\n• Performance dashboards\n• Predictive insights\n• Resource optimization\n• Cost tracking and ROI analysis\n• Custom reporting tools\n\n🔒 SECURITY & COMPLIANCE\n• Enterprise-grade security\n• End-to-end encryption\n• SOC 2 Type II compliant\n• GDPR and CCPA ready\n• Multi-factor authentication\n\n💼 BUSINESS BENEFITS\n• Increase operational efficiency by 40%\n• Reduce manual tasks by 80%\n• 24/7 automated monitoring\n• Scalable architecture\n• Rapid deployment and ROI\n\nPerfect for businesses looking to harness the power of AI automation. From small startups to Fortune 500 companies, Tiation AI Agents scales with your needs.\n\nStart your AI transformation today!",
+    "keywords": "AI, automation, enterprise, agents, business, productivity, workflow, monitoring, analytics, artificial intelligence, machine learning, automation platform, business intelligence, process automation, digital transformation",
+    "promotionalText": "🚀 LIMITED TIME: Get 30% off your first year! Transform your business with AI automation that works 24/7.",
+    "releaseNotes": "🎉 Welcome to Tiation AI Agents v1.0!\n\n✨ NEW FEATURES:\n• Intuitive dashboard with real-time metrics\n• AI agent management and monitoring\n• Performance analytics and insights\n• Push notifications for critical events\n• Dark theme with neon accents\n\n🔧 IMPROVEMENTS:\n• Optimized performance\n• Enhanced security\n• Better user experience\n• Streamlined workflows\n\n🐛 BUG FIXES:\n• Various stability improvements\n• Enhanced error handling\n• UI/UX refinements\n\nThank you for choosing Tiation AI Agents!",
+    "category": "Business",
+    "secondaryCategory": "Productivity",
+    "contentRating": "4+",
+    "supportURL": "https://github.com/TiaAstor/tiation-ai-agents/wiki",
+    "marketingURL": "https://tiaastor.github.io/tiation-ai-agents",
+    "privacyURL": "https://github.com/TiaAstor/tiation-ai-agents/blob/main/PRIVACY.md",
+    "copyright": "© 2024 Tiation Technologies. All rights reserved."
+  },
+  "pricing": {
+    "model": "freemium",
+    "tiers": [
+      {
+        "name": "Starter",
+        "price": "$99/month",
+        "description": "Perfect for small businesses",
+        "features": [
+          "Up to 3 AI agents",
+          "Basic monitoring",
+          "Email support",
+          "Standard integrations"
+        ]
+      },
+      {
+        "name": "Professional",
+        "price": "$299/month",
+        "description": "Ideal for growing companies",
+        "features": [
+          "Up to 10 AI agents",
+          "Advanced analytics",
+          "Priority support",
+          "Custom integrations",
+          "Role-based access"
+        ]
+      },
+      {
+        "name": "Enterprise",
+        "price": "$999/month",
+        "description": "For large organizations",
+        "features": [
+          "Unlimited AI agents",
+          "White-label solution",
+          "24/7 dedicated support",
+          "Custom development",
+          "On-premise deployment",
+          "SLA guarantee"
+        ]
+      }
+    ],
+    "freeTrial": {
+      "duration": "14 days",
+      "features": "Full access to Professional tier"
+    }
+  },
+  "targetAudience": {
+    "primary": [
+      "Business executives",
+      "Operations managers",
+      "IT professionals",
+      "Process automation specialists",
+      "Digital transformation leaders"
+    ],
+    "industries": [
+      "Technology",
+      "Finance",
+      "Healthcare",
+      "Manufacturing",
+      "Retail",
+      "Professional services"
+    ],
+    "companySize": [
+      "Small businesses (10-50 employees)",
+      "Mid-market (51-1000 employees)",
+      "Enterprise (1000+ employees)"
+    ]
+  },
+  "competitiveAdvantages": [
+    "Advanced AI agent orchestration",
+    "Real-time monitoring and control",
+    "Enterprise-grade security",
+    "Intuitive mobile interface",
+    "Rapid deployment and ROI",
+    "24/7 autonomous operation",
+    "Comprehensive analytics",
+    "Scalable architecture"
+  ],
+  "testimonials": [
+    {
+      "company": "TechCorp Inc.",
+      "role": "CTO",
+      "quote": "Tiation AI Agents transformed our operations. We've seen a 60% increase in efficiency and significant cost savings.",
+      "rating": 5
+    },
+    {
+      "company": "Global Manufacturing",
+      "role": "Operations Director",
+      "quote": "The real-time monitoring capabilities are game-changing. We can now prevent issues before they impact our production.",
+      "rating": 5
+    },
+    {
+      "company": "Financial Services Ltd.",
+      "role": "Head of Digital Innovation",
+      "quote": "Security and compliance features are top-notch. Perfect for our regulated industry.",
+      "rating": 5
+    }
+  ]
+}
