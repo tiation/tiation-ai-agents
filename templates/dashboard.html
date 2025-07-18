@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <style>
+        /* Dark Neon Theme - Enterprise AI Agents Dashboard */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(90deg, #00ffff 0%, #ff00ff 100%);
+            padding: 1rem 2rem;
+            box-shadow: 0 4px 20px rgba(0, 255, 255, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header h1 {
+            color: #000000;
+            font-size: 2rem;
+            font-weight: 700;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+
+        .header .subtitle {
+            color: #333333;
+            font-size: 0.9rem;
+            margin-top: 0.25rem;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Status Cards */
+        .status-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .status-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            border-radius: 12px;
+            padding: 1.5rem;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .status-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #00ffff, #ff00ff);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .status-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
+            border-color: rgba(0, 255, 255, 0.6);
+        }
+
+        .status-card:hover::before {
+            opacity: 1;
+        }
+
+        .status-card h3 {
+            color: #00ffff;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .status-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #ffffff;
+            text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+        }
+
+        .status-label {
+            color: #cccccc;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Agents Grid */
+        .agents-section {
+            margin-top: 2rem;
+        }
+
+        .section-title {
+            color: #00ffff;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-bottom: 2px solid rgba(0, 255, 255, 0.3);
+            padding-bottom: 0.5rem;
+        }
+
+        .agents-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .agent-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            border-radius: 12px;
+            padding: 1.5rem;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .agent-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 255, 255, 0.15);
+            border-color: rgba(0, 255, 255, 0.4);
+        }
+
+        .agent-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .agent-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        .agent-status {
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .status-active {
+            background: rgba(0, 255, 0, 0.2);
+            color: #00ff00;
+            border: 1px solid #00ff00;
+        }
+
+        .status-idle {
+            background: rgba(255, 255, 0, 0.2);
+            color: #ffff00;
+            border: 1px solid #ffff00;
+        }
+
+        .status-error {
+            background: rgba(255, 0, 0, 0.2);
+            color: #ff0000;
+            border: 1px solid #ff0000;
+        }
+
+        .status-offline {
+            background: rgba(128, 128, 128, 0.2);
+            color: #888888;
+            border: 1px solid #888888;
+        }
+
+        .agent-metrics {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .metric {
+            text-align: center;
+        }
+
+        .metric-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #00ffff;
+        }
+
+        .metric-label {
+            font-size: 0.8rem;
+            color: #cccccc;
+            margin-top: 0.2rem;
+        }
+
+        .agent-actions {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .btn {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, #00ffff, #0099cc);
+            color: #000000;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(45deg, #00cccc, #0077aa);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 255, 255, 0.3);
+        }
+
+        .btn-secondary {
+            background: linear-gradient(45deg, #ff00ff, #cc0099);
+            color: #ffffff;
+        }
+
+        .btn-secondary:hover {
+            background: linear-gradient(45deg, #cc00cc, #aa0077);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 0, 255, 0.3);
+        }
+
+        .btn-danger {
+            background: linear-gradient(45deg, #ff0000, #cc0000);
+            color: #ffffff;
+        }
+
+        .btn-danger:hover {
+            background: linear-gradient(45deg, #cc0000, #aa0000);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 0, 0, 0.3);
+        }
+
+        /* Connection Status */
+        .connection-status {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            z-index: 1001;
+        }
+
+        .connected {
+            background: rgba(0, 255, 0, 0.2);
+            color: #00ff00;
+            border: 1px solid #00ff00;
+        }
+
+        .disconnected {
+            background: rgba(255, 0, 0, 0.2);
+            color: #ff0000;
+            border: 1px solid #ff0000;
+        }
+
+        /* Loading Animation */
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(0, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: #00ffff;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .status-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .agents-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Neon Glow Effects */
+        .neon-text {
+            text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff;
+        }
+
+        .neon-border {
+            box-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff;
+        }
+
+        /* Chart Container */
+        .chart-container {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-top: 2rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .chart-title {
+            color: #00ffff;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+    <div class="connection-status" id="connectionStatus">
+        <span class="loading"></span> Connecting...
+    </div>
+
+    <header class="header">
+        <h1>🤖 Tiation AI Agents</h1>
+        <p class="subtitle">Enterprise Automation Dashboard</p>
+    </header>
+
+    <div class="container">
+        <!-- System Status Overview -->
+        <div class="status-grid">
+            <div class="status-card">
+                <h3>Total Agents</h3>
+                <div class="status-value" id="totalAgents">0</div>
+                <div class="status-label">Deployed Agents</div>
+            </div>
+            <div class="status-card">
+                <h3>Active Agents</h3>
+                <div class="status-value" id="activeAgents">0</div>
+                <div class="status-label">Currently Running</div>
+            </div>
+            <div class="status-card">
+                <h3>Tasks Completed</h3>
+                <div class="status-value" id="tasksCompleted">0</div>
+                <div class="status-label">Total Success</div>
+            </div>
+            <div class="status-card">
+                <h3>System Load</h3>
+                <div class="status-value" id="systemLoad">0%</div>
+                <div class="status-label">CPU Usage</div>
+            </div>
+        </div>
+
+        <!-- Agents Section -->
+        <div class="agents-section">
+            <h2 class="section-title">AI Agents</h2>
+            <div class="agents-grid" id="agentsGrid">
+                <!-- Agent cards will be dynamically populated -->
+            </div>
+        </div>
+
+        <!-- Performance Chart -->
+        <div class="chart-container">
+            <h3 class="chart-title">Performance Metrics</h3>
+            <canvas id="performanceChart" width="400" height="200"></canvas>
+        </div>
+    </div>
+
+    <script>
+        // WebSocket connection for real-time updates
+        let socket = null;
+        let reconnectAttempts = 0;
+        const maxReconnectAttempts = 5;
+
+        function connectWebSocket() {
+            const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsUrl = `${protocol}//${window.location.host}/ws`;
+            
+            socket = new WebSocket(wsUrl);
+            
+            socket.onopen = function() {
+                console.log('WebSocket connected');
+                reconnectAttempts = 0;
+                updateConnectionStatus('connected');
+            };
+            
+            socket.onmessage = function(event) {
+                const data = JSON.parse(event.data);
+                if (data.type === 'metrics_update') {
+                    updateDashboard(data.data);
+                }
+            };
+            
+            socket.onclose = function() {
+                console.log('WebSocket disconnected');
+                updateConnectionStatus('disconnected');
+                
+                // Attempt to reconnect
+                if (reconnectAttempts < maxReconnectAttempts) {
+                    reconnectAttempts++;
+                    setTimeout(connectWebSocket, 2000 * reconnectAttempts);
+                }
+            };
+            
+            socket.onerror = function(error) {
+                console.error('WebSocket error:', error);
+                updateConnectionStatus('error');
+            };
+        }
+
+        function updateConnectionStatus(status) {
+            const statusElement = document.getElementById('connectionStatus');
+            statusElement.className = 'connection-status';
+            
+            switch(status) {
+                case 'connected':
+                    statusElement.classList.add('connected');
+                    statusElement.innerHTML = '🟢 Connected';
+                    break;
+                case 'disconnected':
+                    statusElement.classList.add('disconnected');
+                    statusElement.innerHTML = '🔴 Disconnected';
+                    break;
+                case 'error':
+                    statusElement.classList.add('disconnected');
+                    statusElement.innerHTML = '⚠️ Connection Error';
+                    break;
+                default:
+                    statusElement.innerHTML = '<span class="loading"></span> Connecting...';
+            }
+        }
+
+        function updateDashboard(data) {
+            // Update system metrics
+            const system = data.system;
+            document.getElementById('totalAgents').textContent = system.total_agents;
+            document.getElementById('activeAgents').textContent = system.active_agents;
+            document.getElementById('tasksCompleted').textContent = system.completed_tasks;
+            document.getElementById('systemLoad').textContent = `${system.system_load.toFixed(1)}%`;
+
+            // Update agents grid
+            const agentsGrid = document.getElementById('agentsGrid');
+            agentsGrid.innerHTML = '';
+            
+            data.agents.forEach(agent => {
+                const agentCard = createAgentCard(agent);
+                agentsGrid.appendChild(agentCard);
+            });
+        }
+
+        function createAgentCard(agent) {
+            const card = document.createElement('div');
+            card.className = 'agent-card';
+            
+            const statusClass = `status-${agent.status}`;
+            
+            card.innerHTML = `
+                <div class="agent-header">
+                    <div class="agent-name">${agent.name}</div>
+                    <div class="agent-status ${statusClass}">${agent.status}</div>
+                </div>
+                <div class="agent-metrics">
+                    <div class="metric">
+                        <div class="metric-value">${agent.cpu_usage.toFixed(1)}%</div>
+                        <div class="metric-label">CPU</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">${agent.memory_usage.toFixed(1)}%</div>
+                        <div class="metric-label">Memory</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">${agent.tasks_completed}</div>
+                        <div class="metric-label">Completed</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">${agent.tasks_failed}</div>
+                        <div class="metric-label">Failed</div>
+                    </div>
+                </div>
+                <div class="agent-actions">
+                    <button class="btn btn-primary" onclick="controlAgent('${agent.agent_id}', 'start')">
+                        Start
+                    </button>
+                    <button class="btn btn-secondary" onclick="controlAgent('${agent.agent_id}', 'restart')">
+                        Restart
+                    </button>
+                    <button class="btn btn-danger" onclick="controlAgent('${agent.agent_id}', 'stop')">
+                        Stop
+                    </button>
+                </div>
+            `;
+            
+            return card;
+        }
+
+        async function controlAgent(agentId, action) {
+            try {
+                const response = await fetch(`/api/agents/${agentId}/${action}`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                });
+                
+                if (response.ok) {
+                    const result = await response.json();
+                    console.log(`Agent ${action} successful:`, result.message);
+                    // Show success notification
+                    showNotification(`Agent ${action} successful`, 'success');
+                } else {
+                    console.error(`Agent ${action} failed:`, response.statusText);
+                    showNotification(`Agent ${action} failed`, 'error');
+                }
+            } catch (error) {
+                console.error(`Error controlling agent:`, error);
+                showNotification(`Error controlling agent`, 'error');
+            }
+        }
+
+        function showNotification(message, type) {
+            // Create notification element
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                position: fixed;
+                top: 80px;
+                right: 20px;
+                padding: 1rem 1.5rem;
+                border-radius: 8px;
+                color: white;
+                font-weight: 600;
+                z-index: 1002;
+                animation: slideIn 0.3s ease-out;
+                max-width: 300px;
+            `;
+            
+            if (type === 'success') {
+                notification.style.background = 'rgba(0, 255, 0, 0.2)';
+                notification.style.border = '1px solid #00ff00';
+            } else {
+                notification.style.background = 'rgba(255, 0, 0, 0.2)';
+                notification.style.border = '1px solid #ff0000';
+            }
+            
+            notification.textContent = message;
+            document.body.appendChild(notification);
+            
+            // Remove notification after 3 seconds
+            setTimeout(() => {
+                notification.remove();
+            }, 3000);
+        }
+
+        // Initialize dashboard
+        document.addEventListener('DOMContentLoaded', function() {
+            connectWebSocket();
+            
+            // Load initial data
+            loadInitialData();
+            
+            // Refresh data every 30 seconds as fallback
+            setInterval(loadInitialData, 30000);
+        });
+
+        async function loadInitialData() {
+            try {
+                const response = await fetch('/api/metrics');
+                if (response.ok) {
+                    const data = await response.json();
+                    updateDashboard(data);
+                }
+            } catch (error) {
+                console.error('Error loading initial data:', error);
+            }
+        }
+
+        // Add slide-in animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideIn {
+                from {
+                    transform: translateX(100%);
+                    opacity: 0;
+                }
+                to {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
