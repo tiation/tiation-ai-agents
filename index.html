@@ -7,6 +7,8 @@
     <meta name="description" content="Next-generation AI automation platform with quantum-inspired design and enterprise-grade documentation">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
         :root {
             --primary-color: #00D9FF;
@@ -943,6 +945,26 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#ecosystem">Ecosystem</a></li>
                 <li><a href="https://github.com/tiation/tiation-ai-agents">GitHub</a></li>
+                <li>
+                    <button id="theme-toggle" class="text-gray-700 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-cyan-400 transition p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800" style="background: none; border: none; color: var(--text-color); cursor: pointer; padding: 0.5rem; border-radius: 50%; transition: all 0.3s ease;">
+                        <i id="theme-icon" class="fas fa-moon" style="font-size: 1.2rem;"></i>
+                    </button>
+                </li>
+            </ul>
+            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">☰</button>
+        </nav>
+        <nav class="mobile-nav" id="mobile-nav">
+            <ul>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#ecosystem">Ecosystem</a></li>
+                <li><a href="https://github.com/tiation/tiation-ai-agents">GitHub</a></li>
+                <li>
+                    <button id="theme-toggle-mobile" class="text-gray-700 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-cyan-400 transition p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800" style="background: none; border: none; color: var(--text-color); cursor: pointer; padding: 0.5rem; border-radius: 50%; transition: all 0.3s ease;">
+                        <i id="theme-icon-mobile" class="fas fa-moon" style="font-size: 1.2rem;"></i>
+                    </button>
+                </li>
             </ul>
         </nav>
     </header>
@@ -1261,13 +1283,41 @@
             });
         });
 
+        // Mobile menu functionality
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const mobileNav = document.querySelector('.mobile-nav');
+        
+        if (mobileMenuToggle && mobileNav) {
+            mobileMenuToggle.addEventListener('click', function() {
+                mobileNav.classList.toggle('active');
+                // Update hamburger icon
+                mobileMenuToggle.textContent = mobileNav.classList.contains('active') ? '✕' : '☰';
+            });
+            
+            // Close mobile menu when clicking on a link
+            document.querySelectorAll('.mobile-nav a').forEach(function(link) {
+                link.addEventListener('click', function() {
+                    mobileNav.classList.remove('active');
+                    mobileMenuToggle.textContent = '☰';
+                });
+            });
+            
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!mobileMenuToggle.contains(e.target) && !mobileNav.contains(e.target)) {
+                    mobileNav.classList.remove('active');
+                    mobileMenuToggle.textContent = '☰';
+                }
+            });
+        }
+        
         // Add scroll effect to header
         let lastScrollTop = 0;
         window.addEventListener('scroll', () => {
             const header = document.querySelector('.header');
             const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
             
-            if (scrollTop > lastScrollTop) {
+            if (scrollTop > lastScrollTop && scrollTop > 100) {
                 header.style.transform = 'translateY(-100%)';
             } else {
                 header.style.transform = 'translateY(0)';
@@ -1276,5 +1326,6 @@
             lastScrollTop = scrollTop;
         });
     </script>
+    <script src="../config/tiation-theme-toggle.js"></script>
 </body>
 </html>
