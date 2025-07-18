@@ -648,26 +648,276 @@
             display: block;
         }
         
+        /* Mobile hamburger menu */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--primary-color);
+            padding: 0.5rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu-toggle:hover {
+            background: rgba(0, 217, 255, 0.1);
+        }
+
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: 70px;
+            left: 0;
+            right: 0;
+            background: rgba(26, 26, 26, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0, 217, 255, 0.3);
+            z-index: 999;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .mobile-nav.active {
+            display: block;
+            animation: slideDown 0.3s ease;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .mobile-nav ul {
+            list-style: none;
+            padding: 1rem 0;
+            margin: 0;
+        }
+
+        .mobile-nav li {
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .mobile-nav li:last-child {
+            border-bottom: none;
+        }
+
+        .mobile-nav a {
+            display: block;
+            padding: 1.2rem 2rem;
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+        }
+
+        .mobile-nav a:hover {
+            background: rgba(0, 217, 255, 0.1);
+            color: var(--primary-color);
+            border-left-color: var(--primary-color);
+        }
+        
+        /* Responsive breakpoints */
+        @media (max-width: 1200px) {
+            .container {
+                padding: 0 1.5rem;
+            }
+            
+            .pricing-grid {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            }
+        }
+
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .hero .subtitle {
-                font-size: 1.2rem;
-            }
-            
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
+            .mobile-menu-toggle {
+                display: block;
             }
             
             .nav-links {
                 display: none;
             }
             
+            .nav {
+                padding: 1rem;
+            }
+            
+            .hero {
+                padding: 6rem 1rem 3rem;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+                line-height: 1.2;
+            }
+            
+            .hero .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .hero .description {
+                font-size: 1rem;
+                max-width: 100%;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.8rem;
+            }
+            
+            .cta-button {
+                width: 100%;
+                max-width: 280px;
+                justify-content: center;
+                padding: 1rem 1.5rem;
+            }
+            
+            .section {
+                padding: 3rem 0;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .section-subtitle {
+                font-size: 1rem;
+            }
+            
             .features {
                 grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .feature-card {
+                padding: 1.5rem;
+                text-align: center;
+            }
+            
+            .feature-icon {
+                font-size: 2.5rem;
+            }
+            
+            .pricing-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .pricing-card {
+                padding: 2rem;
+            }
+            
+            .pricing-card.featured {
+                transform: none;
+                order: -1;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+            
+            .stat-number {
+                font-size: 2.2rem;
+            }
+            
+            .ecosystem {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 1rem;
+            }
+            
+            .hero {
+                padding: 5rem 1rem 2.5rem;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .hero .subtitle {
+                font-size: 1rem;
+            }
+            
+            .cta-button {
+                padding: 0.8rem 1.2rem;
+                font-size: 0.9rem;
+                max-width: 100%;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .feature-card {
+                padding: 1.2rem;
+            }
+            
+            .feature-icon {
+                font-size: 2rem;
+            }
+            
+            .pricing-card {
+                padding: 1.5rem;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stat-number {
+                font-size: 1.8rem;
+            }
+        }
+        
+        /* Touch device optimizations */
+        @media (hover: none) and (pointer: coarse) {
+            .cta-button {
+                min-height: 48px;
+                padding: 14px 28px;
+            }
+            
+            .mobile-nav a {
+                padding: 1.5rem 2rem;
+                font-size: 1.1rem;
+            }
+            
+            .feature-card {
+                padding: 2rem;
+            }
+            
+            /* Remove hover animations on touch devices */
+            .feature-card:hover,
+            .pricing-card:hover,
+            .stat-card:hover {
+                transform: none;
+                box-shadow: none;
+            }
+        }
+        
+        /* Landscape mobile optimization */
+        @media (max-width: 768px) and (orientation: landscape) {
+            .hero {
+                padding: 4rem 1rem 2rem;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .section {
+                padding: 2.5rem 0;
+            }
+            
+            .cta-buttons {
+                flex-direction: row;
+                flex-wrap: wrap;
             }
         }
         
