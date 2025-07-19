@@ -4,7 +4,7 @@ struct ContentView: View {
     @State private var selectedTab = 0
     
     var body: some View {
-        TabView(selection: $selectedTab) {
+TabView(selection: $selectedTab) {
             SimpleDashboardView()
                 .tabItem {
                     Image(systemName: "chart.bar.fill")
@@ -19,19 +19,26 @@ struct ContentView: View {
                 }
                 .tag(1)
             
+            CounselorView()
+                .tabItem {
+                    Image(systemName: "heart.text.square.fill")
+                    Text("Counselor")
+                }
+                .tag(2)
+            
             AnalyticsView()
                 .tabItem {
                     Image(systemName: "chart.line.uptrend.xyaxis")
                     Text("Analytics")
                 }
-                .tag(2)
+                .tag(3)
             
             SettingsView()
                 .tabItem {
                     Image(systemName: "gearshape.fill")
                     Text("Settings")
                 }
-                .tag(3)
+                .tag(4)
         }
         .accentColor(TiationColors.primaryCyan)
         .background(
